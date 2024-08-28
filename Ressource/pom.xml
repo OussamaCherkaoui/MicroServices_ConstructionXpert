@@ -7,14 +7,11 @@
         <artifactId>ConstructionXpert</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-
     <groupId>org</groupId>
-    <artifactId>Project</artifactId>
-    <packaging>jar</packaging>
+    <artifactId>Ressource</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Project</name>
-    <description>Project</description>
-
+    <name>Ressource</name>
+    <description>Ressource</description>
     <url/>
     <licenses>
         <license/>
@@ -54,4 +51,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
