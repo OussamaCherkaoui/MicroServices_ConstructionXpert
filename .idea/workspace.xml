@@ -4,19 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5300d228-cf8a-45a9-89d5-7b37aed8321b" name="Changes" comment="créer multimodel et model project">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/diff-generator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy-datasource.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="5300d228-cf8a-45a9-89d5-7b37aed8321b" name="Changes" comment="ajouter les dépendances nécessaire et fixer des erreur lors de configuration">
+      <change afterPath="$PROJECT_DIR$/Project/src/main/resources/db/migration/V1__Create_Table_Project.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressource/src/main/resources/db/migration/V1__Create_Ressource_Table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task/src/main/resources/db/migration/V1__Create_Task_Table.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Project/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/main/java/org/project/ProjectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/main/java/org/project/ProjectApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressource/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Ressource/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Task/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +20,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -139,7 +137,7 @@
       <workItem from="1724687359487" duration="1559000" />
       <workItem from="1724752577690" duration="19216000" />
       <workItem from="1724844436552" duration="123000" />
-      <workItem from="1724850021334" duration="9006000" />
+      <workItem from="1724850021334" duration="10427000" />
     </task>
     <task id="LOCAL-00001" summary="créer multimodel et model project">
       <option name="closed" value="true" />
@@ -157,7 +155,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724756145616</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="ajouter les dépendances nécessaire et fixer des erreur lors de configuration">
+      <option name="closed" value="true" />
+      <created>1724860587345</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1724860587345</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,6 +171,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="créer multimodel et model project" />
-    <option name="LAST_COMMIT_MESSAGE" value="créer multimodel et model project" />
+    <MESSAGE value="ajouter les dépendances nécessaire et fixer des erreur lors de configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajouter les dépendances nécessaire et fixer des erreur lors de configuration" />
   </component>
 </project>
