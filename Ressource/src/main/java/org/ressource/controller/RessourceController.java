@@ -2,6 +2,7 @@ package org.ressource.controller;
 
 
 import org.ressource.exception.RessourceNotFoundException;
+import org.ressource.exception.TaskNotFoundException;
 import org.ressource.model.Ressource;
 import org.ressource.service.RessourceService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,7 @@ public class RessourceController {
     private RessourceService ressourceService;
 
     @PostMapping("/saveRessource")
-    public ResponseEntity<Ressource> createResource(@RequestBody Ressource resource) {
+    public ResponseEntity<Ressource> createResource(@RequestBody Ressource resource) throws TaskNotFoundException {
         Ressource createdResource = ressourceService.createResource(resource);
         return ResponseEntity.ok(createdResource);
     }
