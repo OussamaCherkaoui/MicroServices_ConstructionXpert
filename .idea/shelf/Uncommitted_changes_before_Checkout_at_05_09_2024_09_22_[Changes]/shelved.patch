@@ -1,0 +1,146 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"5300d228-cf8a-45a9-89d5-7b37aed8321b\" name=\"Changes\" comment=\"réaliser toutes les fonctionalités nécessaire\">\r\n      <change afterPath=\"$PROJECT_DIR$/Ressource/src/main/java/org/ressource/exception/TaskNotFoundException.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Ressource/src/main/java/org/ressource/service/RessourceService.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Ressource/src/main/java/org/ressource/service/RessourceService.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"JpbToolWindowState\">\r\n    <option name=\"isToolWindowVisible\" value=\"false\" />\r\n  </component>\r\n  <component name=\"KubernetesApiPersistence\">{}</component>\r\n  <component name=\"KubernetesApiProvider\">{\r\n  &quot;isMigrated&quot;: true\r\n}</component>\r\n  <component name=\"MavenRunner\">\r\n    <option name=\"skipTests\" value=\"true\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 6\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2lCcAqiUyX185toLqUBcZsjsf1x\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Maven.ConstructionXpert [clean].executor\": \"Run\",\r\n    \"Maven.ConstructionXpert [install].executor\": \"Run\",\r\n    \"Maven.ConstructionXpert [verify].executor\": \"Run\",\r\n    \"Maven.Eureka [clean].executor\": \"Run\",\r\n    \"Maven.Eureka [install].executor\": \"Run\",\r\n    \"Maven.Project [clean].executor\": \"Run\",\r\n    \"Maven.Project [install].executor\": \"Run\",\r\n    \"Maven.Project [verify].executor\": \"Run\",\r\n    \"Maven.Ressource [clean].executor\": \"Run\",\r\n    \"Maven.Ressource [install].executor\": \"Run\",\r\n    \"Maven.Task [clean].executor\": \"Run\",\r\n    \"Maven.Task [install].executor\": \"Run\",\r\n    \"RequestMappingsPanelOrder0\": \"0\",\r\n    \"RequestMappingsPanelOrder1\": \"1\",\r\n    \"RequestMappingsPanelWidth0\": \"75\",\r\n    \"RequestMappingsPanelWidth1\": \"75\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"Spring Boot.EurekaApplication.executor\": \"Run\",\r\n    \"Spring Boot.ProjectApplication (1).executor\": \"Run\",\r\n    \"Spring Boot.ProjectApplication.executor\": \"Run\",\r\n    \"Spring Boot.RessourceApplication.executor\": \"Run\",\r\n    \"Spring Boot.TaskApplication.executor\": \"Run\",\r\n    \"git-widget-placeholder\": \"main\",\r\n    \"jdk.selected.JAVA_MODULE\": \"21\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Users/user/IdeaProjects/ConstructionXpert/Task/src/main/java/org/task\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"project.structure.last.edited\": \"Project\",\r\n    \"project.structure.proportion\": \"0.0\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"run.configurations.included.in.services\": \"true\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  },\r\n  \"keyToStringList\": {\r\n    \"DatabaseDriversLRU\": [\r\n      \"mariadb\",\r\n      \"mysql\"\r\n    ]\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\user\\IdeaProjects\\ConstructionXpert\\Task\\src\\main\\java\\org\\task\" />\r\n      <recent name=\"C:\\Users\\user\\IdeaProjects\\ConstructionXpert\\Ressource\\src\\main\\java\\org\\ressource\" />\r\n    </key>\r\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\r\n      <recent name=\"\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"org.ressource.exception\" />\r\n      <recent name=\"org.task.exception\" />\r\n      <recent name=\"org.ressource.config\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunDashboard\">\r\n    <option name=\"configurationTypes\">\r\n      <set>\r\n        <option value=\"MicronautRunConfigurationType\" />\r\n        <option value=\"QuarkusRunConfigurationType\" />\r\n        <option value=\"SpringBootApplicationConfigurationType\" />\r\n      </set>\r\n    </option>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Spring Boot.ProjectApplication\">\r\n    <configuration name=\"EurekaApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\r\n      <module name=\"Eureka\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"org.eureka.EurekaApplication\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ProjectApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Project\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"org.project.ProjectApplication\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"org.project.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"RessourceApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\r\n      <module name=\"Ressource\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"org.ressource.RessourceApplication\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"TaskApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\r\n      <option name=\"FRAME_DEACTIVATION_UPDATE_POLICY\" value=\"UpdateClassesAndResources\" />\r\n      <module name=\"Task\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"org.task.TaskApplication\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Spring Boot.EurekaApplication\" />\r\n      <item itemvalue=\"Spring Boot.RessourceApplication\" />\r\n      <item itemvalue=\"Spring Boot.TaskApplication\" />\r\n      <item itemvalue=\"Spring Boot.ProjectApplication\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Spring Boot.ProjectApplication\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150\" />\r\n        <option value=\"bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"5300d228-cf8a-45a9-89d5-7b37aed8321b\" name=\"Changes\" comment=\"\" />\r\n      <created>1724687358322</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1724687358322</updated>\r\n      <workItem from=\"1724687359487\" duration=\"1559000\" />\r\n      <workItem from=\"1724752577690\" duration=\"19216000\" />\r\n      <workItem from=\"1724844436552\" duration=\"123000\" />\r\n      <workItem from=\"1724850021334\" duration=\"24283000\" />\r\n      <workItem from=\"1724939563941\" duration=\"15174000\" />\r\n      <workItem from=\"1725006671272\" duration=\"6252000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"créer multimodel et model project\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1724756136784</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1724756136784</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"créer multimodel et model project\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1724756145616</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1724756145616</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"ajouter les dépendances nécessaire et fixer des erreur lors de configuration\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1724860587345</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1724860587345</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"ajouter flayway\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1724862037504</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1724862037504</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"réaliser toutes les fonctionalités nécessaire\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1725013916830</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1725013916830</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"créer multimodel et model project\" />\r\n    <MESSAGE value=\"ajouter les dépendances nécessaire et fixer des erreur lors de configuration\" />\r\n    <MESSAGE value=\"ajouter flayway\" />\r\n    <MESSAGE value=\"réaliser toutes les fonctionalités nécessaire\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"réaliser toutes les fonctionalités nécessaire\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -5,9 +5,35 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="5300d228-cf8a-45a9-89d5-7b37aed8321b" name="Changes" comment="réaliser toutes les fonctionalités nécessaire">
+-      <change afterPath="$PROJECT_DIR$/Ressource/src/main/java/org/ressource/exception/TaskNotFoundException.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/config/AuthenticationResponse.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/config/JwtRequestFilter.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/config/SecurityConfig.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/controller/AdminController.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/controller/UserController.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/controller/UtilisateurController.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/enums/Role.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/exception/UserNotFoundException.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/model/Admin.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/model/AuthenticationRequest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/model/User.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/model/Utilisateur.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/repository/AdminRepository.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/repository/UserRepository.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/repository/UtilisateurRepository.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/service/AdminService.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/service/UserService.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/service/UtilisateurService.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/util/JwtUtil.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/resources/db/migration/V1_Create_User_Table.sql" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Ressource/src/main/java/org/ressource/task/TaskRest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Task/src/main/java/org/task/Project/ProjectRest.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Ressource/src/main/java/org/ressource/config/RestTemplatConfig.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Ressource/src/main/java/org/ressource/controller/RessourceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ressource/src/main/java/org/ressource/controller/RessourceController.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/Ressource/src/main/java/org/ressource/service/RessourceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ressource/src/main/java/org/ressource/service/RessourceService.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Task/src/main/java/org/task/config/RestTemplatConfig.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Task/src/main/java/org/task/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/src/main/java/org/task/service/TaskService.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -44,53 +70,53 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "Maven.ConstructionXpert [clean].executor": "Run",
+-    "Maven.ConstructionXpert [install].executor": "Run",
+-    "Maven.ConstructionXpert [verify].executor": "Run",
+-    "Maven.Eureka [clean].executor": "Run",
+-    "Maven.Eureka [install].executor": "Run",
+-    "Maven.Project [clean].executor": "Run",
+-    "Maven.Project [install].executor": "Run",
+-    "Maven.Project [verify].executor": "Run",
+-    "Maven.Ressource [clean].executor": "Run",
+-    "Maven.Ressource [install].executor": "Run",
+-    "Maven.Task [clean].executor": "Run",
+-    "Maven.Task [install].executor": "Run",
+-    "RequestMappingsPanelOrder0": "0",
+-    "RequestMappingsPanelOrder1": "1",
+-    "RequestMappingsPanelWidth0": "75",
+-    "RequestMappingsPanelWidth1": "75",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "Spring Boot.EurekaApplication.executor": "Run",
+-    "Spring Boot.ProjectApplication (1).executor": "Run",
+-    "Spring Boot.ProjectApplication.executor": "Run",
+-    "Spring Boot.RessourceApplication.executor": "Run",
+-    "Spring Boot.TaskApplication.executor": "Run",
+-    "git-widget-placeholder": "main",
+-    "jdk.selected.JAVA_MODULE": "21",
+-    "kotlin-language-version-configured": "true",
+-    "last_opened_file_path": "C:/Users/user/IdeaProjects/ConstructionXpert/Task/src/main/java/org/task",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "project.structure.last.edited": "Project",
+-    "project.structure.proportion": "0.0",
+-    "project.structure.side.proportion": "0.2",
+-    "run.configurations.included.in.services": "true",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Maven.ConstructionXpert [clean].executor&quot;: &quot;Run&quot;,
++    &quot;Maven.ConstructionXpert [install].executor&quot;: &quot;Run&quot;,
++    &quot;Maven.ConstructionXpert [verify].executor&quot;: &quot;Run&quot;,
++    &quot;Maven.Eureka [clean].executor&quot;: &quot;Run&quot;,
++    &quot;Maven.Eureka [install].executor&quot;: &quot;Run&quot;,
++    &quot;Maven.Project [clean].executor&quot;: &quot;Run&quot;,
++    &quot;Maven.Project [install].executor&quot;: &quot;Run&quot;,
++    &quot;Maven.Project [verify].executor&quot;: &quot;Run&quot;,
++    &quot;Maven.Ressource [clean].executor&quot;: &quot;Run&quot;,
++    &quot;Maven.Ressource [install].executor&quot;: &quot;Run&quot;,
++    &quot;Maven.Task [clean].executor&quot;: &quot;Run&quot;,
++    &quot;Maven.Task [install].executor&quot;: &quot;Run&quot;,
++    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
++    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
++    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
++    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;Spring Boot.EurekaApplication.executor&quot;: &quot;Run&quot;,
++    &quot;Spring Boot.ProjectApplication (1).executor&quot;: &quot;Run&quot;,
++    &quot;Spring Boot.ProjectApplication.executor&quot;: &quot;Run&quot;,
++    &quot;Spring Boot.RessourceApplication.executor&quot;: &quot;Run&quot;,
++    &quot;Spring Boot.TaskApplication.executor&quot;: &quot;Run&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
++    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21&quot;,
++    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/IdeaProjects/ConstructionXpert/Task/src/main/java/org/task&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
++    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   },
+-  "keyToStringList": {
+-    "DatabaseDriversLRU": [
+-      "mariadb",
+-      "mysql"
++  &quot;keyToStringList&quot;: {
++    &quot;DatabaseDriversLRU&quot;: [
++      &quot;mariadb&quot;,
++      &quot;mysql&quot;
+     ]
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="C:\Users\user\IdeaProjects\ConstructionXpert\Task\src\main\java\org\task" />

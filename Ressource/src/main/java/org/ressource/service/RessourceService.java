@@ -5,6 +5,7 @@ import org.ressource.exception.RessourceNotFoundException;
 import org.ressource.exception.TaskNotFoundException;
 import org.ressource.model.Ressource;
 import org.ressource.repository.RessourceRepository;
+import org.ressource.task.TaskRest;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -14,8 +15,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class RessourceService {
     private final RessourceRepository resourceRepository;
-    private static final String taskServiceUrl = "http://Task/apiTask";
-    private final RestTemplate restTemplate;
+    private final TaskRest taskRest;
 
     public Ressource createResource(Ressource resource) throws TaskNotFoundException {
         validateTaskExists(resource.getTaskId());
@@ -34,8 +34,7 @@ public class RessourceService {
         if (taskId == null) {
             throw new IllegalArgumentException("Task ID cannot be null");
         }
-        String url = taskServiceUrl + "/isExist/" + taskId ;
-        Boolean exists = restTemplate.getForObject(url, Boolean.class);
+        Boolean exists = taskRest.isExist(taskId);
         if (exists == null || !exists) {
             throw new TaskNotFoundException();
         }
@@ -48,7 +47,8 @@ public class RessourceService {
         resourceRepository.deleteById(id);
     }
 
-    public List<Ressource> getResourcesByTaskId(Long taskId) {
+    public List<Ressource> getResourcesByTaskId(Long taskId) throws TaskNotFoundException {
+        validateTaskExists(taskId);
         return resourceRepository.findByTaskId(taskId);
     }
 }

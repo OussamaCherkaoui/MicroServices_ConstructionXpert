@@ -1,0 +1,941 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"5300d228-cf8a-45a9-89d5-7b37aed8321b\" name=\"Changes\" comment=\"réaliser toutes les fonctionalités nécessaire\">\r\n      <change afterPath=\"$PROJECT_DIR$/Ressource/src/main/java/org/ressource/exception/TaskNotFoundException.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Ressource/src/main/java/org/ressource/service/RessourceService.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Ressource/src/main/java/org/ressource/service/RessourceService.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"JpbToolWindowState\">\r\n    <option name=\"isToolWindowVisible\" value=\"false\" />\r\n  </component>\r\n  <component name=\"KubernetesApiPersistence\">{}</component>\r\n  <component name=\"KubernetesApiProvider\">{\r\n  &quot;isMigrated&quot;: true\r\n}</component>\r\n  <component name=\"MavenRunner\">\r\n    <option name=\"skipTests\" value=\"true\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 6\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2lCcAqiUyX185toLqUBcZsjsf1x\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Maven.ConstructionXpert [clean].executor\": \"Run\",\r\n    \"Maven.ConstructionXpert [install].executor\": \"Run\",\r\n    \"Maven.ConstructionXpert [verify].executor\": \"Run\",\r\n    \"Maven.Eureka [clean].executor\": \"Run\",\r\n    \"Maven.Eureka [install].executor\": \"Run\",\r\n    \"Maven.Project [clean].executor\": \"Run\",\r\n    \"Maven.Project [install].executor\": \"Run\",\r\n    \"Maven.Project [verify].executor\": \"Run\",\r\n    \"Maven.Ressource [clean].executor\": \"Run\",\r\n    \"Maven.Ressource [install].executor\": \"Run\",\r\n    \"Maven.Task [clean].executor\": \"Run\",\r\n    \"Maven.Task [install].executor\": \"Run\",\r\n    \"RequestMappingsPanelOrder0\": \"0\",\r\n    \"RequestMappingsPanelOrder1\": \"1\",\r\n    \"RequestMappingsPanelWidth0\": \"75\",\r\n    \"RequestMappingsPanelWidth1\": \"75\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"Spring Boot.EurekaApplication.executor\": \"Run\",\r\n    \"Spring Boot.ProjectApplication (1).executor\": \"Run\",\r\n    \"Spring Boot.ProjectApplication.executor\": \"Run\",\r\n    \"Spring Boot.RessourceApplication.executor\": \"Run\",\r\n    \"Spring Boot.TaskApplication.executor\": \"Run\",\r\n    \"git-widget-placeholder\": \"main\",\r\n    \"jdk.selected.JAVA_MODULE\": \"21\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Users/user/IdeaProjects/ConstructionXpert/Task/src/main/java/org/task\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"project.structure.last.edited\": \"Project\",\r\n    \"project.structure.proportion\": \"0.0\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"run.configurations.included.in.services\": \"true\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  },\r\n  \"keyToStringList\": {\r\n    \"DatabaseDriversLRU\": [\r\n      \"mariadb\",\r\n      \"mysql\"\r\n    ]\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\user\\IdeaProjects\\ConstructionXpert\\Task\\src\\main\\java\\org\\task\" />\r\n      <recent name=\"C:\\Users\\user\\IdeaProjects\\ConstructionXpert\\Ressource\\src\\main\\java\\org\\ressource\" />\r\n    </key>\r\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\r\n      <recent name=\"\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"org.ressource.exception\" />\r\n      <recent name=\"org.task.exception\" />\r\n      <recent name=\"org.ressource.config\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunDashboard\">\r\n    <option name=\"configurationTypes\">\r\n      <set>\r\n        <option value=\"MicronautRunConfigurationType\" />\r\n        <option value=\"QuarkusRunConfigurationType\" />\r\n        <option value=\"SpringBootApplicationConfigurationType\" />\r\n      </set>\r\n    </option>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Spring Boot.ProjectApplication\">\r\n    <configuration name=\"EurekaApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\r\n      <module name=\"Eureka\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"org.eureka.EurekaApplication\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ProjectApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Project\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"org.project.ProjectApplication\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"org.project.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"RessourceApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\r\n      <module name=\"Ressource\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"org.ressource.RessourceApplication\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"TaskApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\r\n      <option name=\"FRAME_DEACTIVATION_UPDATE_POLICY\" value=\"UpdateClassesAndResources\" />\r\n      <module name=\"Task\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"org.task.TaskApplication\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Spring Boot.EurekaApplication\" />\r\n      <item itemvalue=\"Spring Boot.RessourceApplication\" />\r\n      <item itemvalue=\"Spring Boot.TaskApplication\" />\r\n      <item itemvalue=\"Spring Boot.ProjectApplication\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Spring Boot.ProjectApplication\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150\" />\r\n        <option value=\"bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"5300d228-cf8a-45a9-89d5-7b37aed8321b\" name=\"Changes\" comment=\"\" />\r\n      <created>1724687358322</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1724687358322</updated>\r\n      <workItem from=\"1724687359487\" duration=\"1559000\" />\r\n      <workItem from=\"1724752577690\" duration=\"19216000\" />\r\n      <workItem from=\"1724844436552\" duration=\"123000\" />\r\n      <workItem from=\"1724850021334\" duration=\"24283000\" />\r\n      <workItem from=\"1724939563941\" duration=\"15174000\" />\r\n      <workItem from=\"1725006671272\" duration=\"6252000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"créer multimodel et model project\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1724756136784</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1724756136784</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"créer multimodel et model project\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1724756145616</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1724756145616</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"ajouter les dépendances nécessaire et fixer des erreur lors de configuration\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1724860587345</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1724860587345</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"ajouter flayway\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1724862037504</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1724862037504</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"réaliser toutes les fonctionalités nécessaire\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1725013916830</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1725013916830</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"créer multimodel et model project\" />\r\n    <MESSAGE value=\"ajouter les dépendances nécessaire et fixer des erreur lors de configuration\" />\r\n    <MESSAGE value=\"ajouter flayway\" />\r\n    <MESSAGE value=\"réaliser toutes les fonctionalités nécessaire\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"réaliser toutes les fonctionalités nécessaire\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,10 +4,39 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="5300d228-cf8a-45a9-89d5-7b37aed8321b" name="Changes" comment="réaliser toutes les fonctionalités nécessaire">
+-      <change afterPath="$PROJECT_DIR$/Ressource/src/main/java/org/ressource/exception/TaskNotFoundException.java" afterDir="false" />
++    <list default="true" id="5300d228-cf8a-45a9-89d5-7b37aed8321b" name="Changes" comment="ajouter et configurer  API Gateway Service">
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/config/AuthenticationResponse.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/config/JwtRequestFilter.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/config/SecurityConfig.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/controller/AdminController.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/controller/UserController.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/controller/UtilisateurController.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/enums/Role.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/exception/UserNotFoundException.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/model/Admin.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/model/AuthenticationRequest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/model/User.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/model/Utilisateur.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/repository/AdminRepository.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/repository/UserRepository.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/repository/UtilisateurRepository.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/service/AdminService.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/service/UserService.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/service/UtilisateurService.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/util/JwtUtil.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/resources/db/migration/V1_Create_User_Table.sql" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Ressource/src/main/java/org/ressource/RessourceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ressource/src/main/java/org/ressource/RessourceApplication.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Ressource/src/main/java/org/ressource/config/RestTemplatConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ressource/src/main/java/org/ressource/task/TaskRest.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Ressource/src/main/java/org/ressource/controller/RessourceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ressource/src/main/java/org/ressource/controller/RessourceController.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/Ressource/src/main/java/org/ressource/service/RessourceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ressource/src/main/java/org/ressource/service/RessourceService.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Ressource/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Ressource/src/main/resources/application.properties" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Task/src/main/java/org/task/TaskApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/src/main/java/org/task/TaskApplication.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Task/src/main/java/org/task/config/RestTemplatConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/src/main/java/org/task/Project/ProjectRest.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Task/src/main/java/org/task/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/src/main/java/org/task/service/TaskService.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -44,65 +73,72 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "Maven.ConstructionXpert [clean].executor": "Run",
+-    "Maven.ConstructionXpert [install].executor": "Run",
+-    "Maven.ConstructionXpert [verify].executor": "Run",
+-    "Maven.Eureka [clean].executor": "Run",
+-    "Maven.Eureka [install].executor": "Run",
+-    "Maven.Project [clean].executor": "Run",
+-    "Maven.Project [install].executor": "Run",
+-    "Maven.Project [verify].executor": "Run",
+-    "Maven.Ressource [clean].executor": "Run",
+-    "Maven.Ressource [install].executor": "Run",
+-    "Maven.Task [clean].executor": "Run",
+-    "Maven.Task [install].executor": "Run",
+-    "RequestMappingsPanelOrder0": "0",
+-    "RequestMappingsPanelOrder1": "1",
+-    "RequestMappingsPanelWidth0": "75",
+-    "RequestMappingsPanelWidth1": "75",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "Spring Boot.EurekaApplication.executor": "Run",
+-    "Spring Boot.ProjectApplication (1).executor": "Run",
+-    "Spring Boot.ProjectApplication.executor": "Run",
+-    "Spring Boot.RessourceApplication.executor": "Run",
+-    "Spring Boot.TaskApplication.executor": "Run",
+-    "git-widget-placeholder": "main",
+-    "jdk.selected.JAVA_MODULE": "21",
+-    "kotlin-language-version-configured": "true",
+-    "last_opened_file_path": "C:/Users/user/IdeaProjects/ConstructionXpert/Task/src/main/java/org/task",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "project.structure.last.edited": "Project",
+-    "project.structure.proportion": "0.0",
+-    "project.structure.side.proportion": "0.2",
+-    "run.configurations.included.in.services": "true",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Maven.ConstructionXpert [clean].executor&quot;: &quot;Run&quot;,
++    &quot;Maven.ConstructionXpert [install].executor&quot;: &quot;Run&quot;,
++    &quot;Maven.ConstructionXpert [verify].executor&quot;: &quot;Run&quot;,
++    &quot;Maven.Eureka [clean].executor&quot;: &quot;Run&quot;,
++    &quot;Maven.Eureka [install].executor&quot;: &quot;Run&quot;,
++    &quot;Maven.Project [clean].executor&quot;: &quot;Run&quot;,
++    &quot;Maven.Project [install].executor&quot;: &quot;Run&quot;,
++    &quot;Maven.Project [verify].executor&quot;: &quot;Run&quot;,
++    &quot;Maven.Ressource [clean].executor&quot;: &quot;Run&quot;,
++    &quot;Maven.Ressource [install].executor&quot;: &quot;Run&quot;,
++    &quot;Maven.Task [clean].executor&quot;: &quot;Run&quot;,
++    &quot;Maven.Task [install].executor&quot;: &quot;Run&quot;,
++    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
++    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
++    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
++    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;Spring Boot.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
++    &quot;Spring Boot.AuthentificationServiceApplication.executor&quot;: &quot;Run&quot;,
++    &quot;Spring Boot.EurekaApplication.executor&quot;: &quot;Run&quot;,
++    &quot;Spring Boot.ProjectApplication (1).executor&quot;: &quot;Run&quot;,
++    &quot;Spring Boot.ProjectApplication.executor&quot;: &quot;Run&quot;,
++    &quot;Spring Boot.RessourceApplication.executor&quot;: &quot;Run&quot;,
++    &quot;Spring Boot.TaskApplication.executor&quot;: &quot;Run&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
++    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21&quot;,
++    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/IdeaProjects/ConstructionXpert/Authentification-Service/src/main/resources&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
++    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   },
+-  "keyToStringList": {
+-    "DatabaseDriversLRU": [
+-      "mariadb",
+-      "mysql"
++  &quot;keyToStringList&quot;: {
++    &quot;DatabaseDriversLRU&quot;: [
++      &quot;mariadb&quot;,
++      &quot;mysql&quot;
+     ]
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+-      <recent name="C:\Users\user\IdeaProjects\ConstructionXpert\Task\src\main\java\org\task" />
+-      <recent name="C:\Users\user\IdeaProjects\ConstructionXpert\Ressource\src\main\java\org\ressource" />
++      <recent name="C:\Users\user\IdeaProjects\ConstructionXpert\Authentification-Service\src\main\resources" />
++      <recent name="C:\Users\user\IdeaProjects\ConstructionXpert\Authentification-Service\src\main\java\org\authentificationservice" />
++      <recent name="C:\Users\user\IdeaProjects\ConstructionXpert\Authentification-Service\src\main\java\org\authentificationservice\service" />
++      <recent name="C:\Users\user\IdeaProjects\ConstructionXpert\Authentification-Service\src\main\java\org\authentificationservice\repository" />
++      <recent name="C:\Users\user\IdeaProjects\ConstructionXpert\Authentification-Service\src\main\java\org\authentificationservice\model" />
+     </key>
+     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+       <recent name="" />
+     </key>
+     <key name="CopyClassDialog.RECENTS_KEY">
+-      <recent name="org.ressource.exception" />
+-      <recent name="org.task.exception" />
+-      <recent name="org.ressource.config" />
++      <recent name="org.task.model" />
++      <recent name="org.authentificationservice.service" />
++      <recent name="org.authentificationservice.repository" />
++      <recent name="org.authentificationservice.exception" />
++      <recent name="org.authentificationservice.controller" />
+     </key>
+   </component>
+   <component name="RunDashboard">
+@@ -115,6 +151,20 @@
+     </option>
+   </component>
+   <component name="RunManager" selected="Spring Boot.ProjectApplication">
++    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
++      <module name="Api-Gateway" />
++      <option name="SPRING_BOOT_MAIN_CLASS" value="org.apigateway.ApiGatewayApplication" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="AuthentificationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
++      <module name="Authentification-Service" />
++      <option name="SPRING_BOOT_MAIN_CLASS" value="org.authentificationservice.AuthentificationServiceApplication" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
+     <configuration name="EurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+       <module name="Eureka" />
+       <option name="SPRING_BOOT_MAIN_CLASS" value="org.eureka.EurekaApplication" />
+@@ -151,6 +201,8 @@
+       </method>
+     </configuration>
+     <list>
++      <item itemvalue="Spring Boot.ApiGatewayApplication" />
++      <item itemvalue="Spring Boot.AuthentificationServiceApplication" />
+       <item itemvalue="Spring Boot.EurekaApplication" />
+       <item itemvalue="Spring Boot.RessourceApplication" />
+       <item itemvalue="Spring Boot.TaskApplication" />
+@@ -159,6 +211,7 @@
+     <recent_temporary>
+       <list>
+         <item itemvalue="Spring Boot.ProjectApplication" />
++        <item itemvalue="Spring Boot.ProjectApplication" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -184,6 +237,8 @@
+       <workItem from="1724850021334" duration="24283000" />
+       <workItem from="1724939563941" duration="15174000" />
+       <workItem from="1725006671272" duration="6252000" />
++      <workItem from="1725438181282" duration="7482000" />
++      <workItem from="1725480300454" duration="6513000" />
+     </task>
+     <task id="LOCAL-00001" summary="créer multimodel et model project">
+       <option name="closed" value="true" />
+Index: Task/src/main/java/org/task/TaskApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.task;\r\n\r\nimport org.springframework.boot.SpringApplication;\r\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\r\nimport org.springframework.cloud.client.discovery.EnableDiscoveryClient;\r\n\r\n@SpringBootApplication\r\n@EnableDiscoveryClient\r\npublic class TaskApplication {\r\n\r\n    public static void main(String[] args) {\r\n        SpringApplication.run(TaskApplication.class, args);\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Task/src/main/java/org/task/TaskApplication.java b/Task/src/main/java/org/task/TaskApplication.java
+--- a/Task/src/main/java/org/task/TaskApplication.java	
++++ b/Task/src/main/java/org/task/TaskApplication.java	
+@@ -3,9 +3,11 @@
+ import org.springframework.boot.SpringApplication;
+ import org.springframework.boot.autoconfigure.SpringBootApplication;
+ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
++import org.springframework.cloud.openfeign.EnableFeignClients;
+ 
+ @SpringBootApplication
+ @EnableDiscoveryClient
++@EnableFeignClients
+ public class TaskApplication {
+ 
+     public static void main(String[] args) {
+Index: Authentification-Service/src/main/java/org/authentificationservice/config/AuthenticationResponse.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/config/AuthenticationResponse.java b/Authentification-Service/src/main/java/org/authentificationservice/config/AuthenticationResponse.java
+new file mode 100644
+--- /dev/null	
++++ b/Authentification-Service/src/main/java/org/authentificationservice/config/AuthenticationResponse.java	
+@@ -0,0 +1,17 @@
++package org.authentificationservice.config;
++
++public class AuthenticationResponse {
++    private String token;
++
++    public AuthenticationResponse(String token) {
++        this.token = token;
++    }
++
++    public String getToken() {
++        return token;
++    }
++
++    public void setToken(String token) {
++        this.token = token;
++    }
++}
+Index: Ressource/src/main/java/org/ressource/RessourceApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.ressource;\r\n\r\nimport org.springframework.boot.SpringApplication;\r\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\r\nimport org.springframework.cloud.client.discovery.EnableDiscoveryClient;\r\n\r\n@SpringBootApplication\r\n@EnableDiscoveryClient\r\npublic class RessourceApplication {\r\n\r\n    public static void main(String[] args) {\r\n        SpringApplication.run(RessourceApplication.class, args);\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Ressource/src/main/java/org/ressource/RessourceApplication.java b/Ressource/src/main/java/org/ressource/RessourceApplication.java
+--- a/Ressource/src/main/java/org/ressource/RessourceApplication.java	
++++ b/Ressource/src/main/java/org/ressource/RessourceApplication.java	
+@@ -3,9 +3,11 @@
+ import org.springframework.boot.SpringApplication;
+ import org.springframework.boot.autoconfigure.SpringBootApplication;
+ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
++import org.springframework.cloud.openfeign.EnableFeignClients;
+ 
+ @SpringBootApplication
+ @EnableDiscoveryClient
++@EnableFeignClients
+ public class RessourceApplication {
+ 
+     public static void main(String[] args) {
+Index: Ressource/src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>spring.application.name=Ressource\r\nspring.datasource.url=jdbc:mysql://localhost:3306/ressource_db?createDatabaseIfNotExist=true\r\nspring.datasource.username=root\r\nspring.datasource.password=\r\nspring.flyway.url=jdbc:mysql://localhost:3306/ressource_db\r\nspring.flyway.user=root\r\nspring.flyway.password=\r\nspring.flyway.locations=classpath:db/migration\r\nspring.flyway.baseline-on-migrate=true\r\nserver.port=8080\r\nspring.jpa.hibernate.ddl-auto=validate\r\nspring.flyway.table=flyway_schema_history\r\nspring.flyway.enabled=true\r\neureka.client.serviceUrl.defaultZone=http://localhost:8761/eureka/
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/Ressource/src/main/resources/application.properties b/Ressource/src/main/resources/application.properties
+--- a/Ressource/src/main/resources/application.properties	
++++ b/Ressource/src/main/resources/application.properties	
+@@ -7,7 +7,7 @@
+ spring.flyway.password=
+ spring.flyway.locations=classpath:db/migration
+ spring.flyway.baseline-on-migrate=true
+-server.port=8080
++server.port=0
+ spring.jpa.hibernate.ddl-auto=validate
+ spring.flyway.table=flyway_schema_history
+ spring.flyway.enabled=true
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"MavenProjectsManager\">\r\n    <option name=\"originalFiles\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/pom.xml\" />\r\n        <option value=\"$PROJECT_DIR$/Project/pom.xml\" />\r\n        <option value=\"$PROJECT_DIR$/Task/pom.xml\" />\r\n        <option value=\"$PROJECT_DIR$/Ressource/pom.xml\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_21\" default=\"true\" project-jdk-name=\"21\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"jpab\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	
++++ b/.idea/misc.xml	
+@@ -8,6 +8,8 @@
+         <option value="$PROJECT_DIR$/Project/pom.xml" />
+         <option value="$PROJECT_DIR$/Task/pom.xml" />
+         <option value="$PROJECT_DIR$/Ressource/pom.xml" />
++        <option value="$PROJECT_DIR$/Authentification-Service/pom.xml" />
++        <option value="$PROJECT_DIR$/Api-Gateway/pom.xml" />
+       </list>
+     </option>
+   </component>
+Index: Authentification-Service/src/main/java/org/authentificationservice/model/AuthenticationRequest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/model/AuthenticationRequest.java b/Authentification-Service/src/main/java/org/authentificationservice/model/AuthenticationRequest.java
+new file mode 100644
+--- /dev/null	
++++ b/Authentification-Service/src/main/java/org/authentificationservice/model/AuthenticationRequest.java	
+@@ -0,0 +1,14 @@
++package org.authentificationservice.model;
++
++import lombok.*;
++
++@NoArgsConstructor
++@AllArgsConstructor
++@Data
++@Getter
++@Setter
++@Builder
++public class AuthenticationRequest {
++    private String username;
++    private String password;
++}
+Index: Authentification-Service/src/main/java/org/authentificationservice/model/Admin.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/model/Admin.java b/Authentification-Service/src/main/java/org/authentificationservice/model/Admin.java
+new file mode 100644
+--- /dev/null	
++++ b/Authentification-Service/src/main/java/org/authentificationservice/model/Admin.java	
+@@ -0,0 +1,18 @@
++package org.authentificationservice.model;
++
++import jakarta.persistence.DiscriminatorValue;
++import jakarta.persistence.Entity;
++import lombok.AllArgsConstructor;
++import lombok.Builder;
++import lombok.Getter;
++import lombok.Setter;
++
++@Entity
++@Getter
++@Setter
++@Builder
++@AllArgsConstructor
++@DiscriminatorValue("ADMIN")
++public class Admin extends Utilisateur {
++
++}
+Index: .idea/encodings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"Encoding\">\r\n    <file url=\"file://$PROJECT_DIR$/Eureka/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/Eureka/src/main/resources\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/Project/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/Project/src/main/resources\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/Ressource/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/Ressource/src/main/resources\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/Task/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/Task/src/main/resources\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/src/main/resources\" charset=\"UTF-8\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/encodings.xml b/.idea/encodings.xml
+--- a/.idea/encodings.xml	
++++ b/.idea/encodings.xml	
+@@ -1,6 +1,8 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="Encoding">
++    <file url="file://$PROJECT_DIR$/Api-Gateway/src/main/java" charset="UTF-8" />
++    <file url="file://$PROJECT_DIR$/Authentification-Service/src/main/java" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/Eureka/src/main/java" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/Eureka/src/main/resources" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/Project/src/main/java" charset="UTF-8" />
+Index: Authentification-Service/src/main/java/org/authentificationservice/exception/UserNotFoundException.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/exception/UserNotFoundException.java b/Authentification-Service/src/main/java/org/authentificationservice/exception/UserNotFoundException.java
+new file mode 100644
+--- /dev/null	
++++ b/Authentification-Service/src/main/java/org/authentificationservice/exception/UserNotFoundException.java	
+@@ -0,0 +1,7 @@
++package org.authentificationservice.exception;
++
++public class UserNotFoundException extends RuntimeException{
++    public UserNotFoundException(){
++        super("user not found !");
++    }
++}
+Index: Authentification-Service/src/main/java/org/authentificationservice/controller/AdminController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/controller/AdminController.java b/Authentification-Service/src/main/java/org/authentificationservice/controller/AdminController.java
+new file mode 100644
+--- /dev/null	
++++ b/Authentification-Service/src/main/java/org/authentificationservice/controller/AdminController.java	
+@@ -0,0 +1,26 @@
++package org.authentificationservice.controller;
++
++import lombok.RequiredArgsConstructor;
++import org.authentificationservice.enums.Role;
++import org.authentificationservice.model.Admin;
++import org.authentificationservice.service.AdminService;
++import org.springframework.http.HttpStatus;
++import org.springframework.http.ResponseEntity;
++import org.springframework.security.crypto.password.PasswordEncoder;
++import org.springframework.web.bind.annotation.*;
++
++@RestController
++@RequestMapping("/auth")
++@RequiredArgsConstructor
++@CrossOrigin(origins = "*")
++public class AdminController {
++    private final PasswordEncoder passwordEncoder;
++    private final AdminService adminService;
++
++    @PostMapping("/registerUser")
++    public ResponseEntity<?> registerUser(@RequestBody Admin admin) {
++        admin.setRole(Role.ADMIN);
++        admin.setPassword(passwordEncoder.encode(admin.getPassword()));
++        return new ResponseEntity<>(adminService.save(admin), HttpStatus.CREATED);
++    }
++}
+Index: Authentification-Service/src/main/java/org/authentificationservice/controller/UserController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/controller/UserController.java b/Authentification-Service/src/main/java/org/authentificationservice/controller/UserController.java
+new file mode 100644
+--- /dev/null	
++++ b/Authentification-Service/src/main/java/org/authentificationservice/controller/UserController.java	
+@@ -0,0 +1,27 @@
++package org.authentificationservice.controller;
++
++
++import lombok.RequiredArgsConstructor;
++import org.authentificationservice.enums.Role;
++import org.authentificationservice.model.User;
++import org.authentificationservice.service.UserService;
++import org.springframework.http.HttpStatus;
++import org.springframework.http.ResponseEntity;
++import org.springframework.security.crypto.password.PasswordEncoder;
++import org.springframework.web.bind.annotation.*;
++
++@RestController
++@RequestMapping("/auth")
++@RequiredArgsConstructor
++@CrossOrigin(origins = "*")
++public class UserController {
++    private final PasswordEncoder passwordEncoder;
++    private final UserService userService;
++
++    @PostMapping("/registerAdmin")
++    public ResponseEntity<?> registerUser(@RequestBody User user) {
++        user.setRole(Role.USER);
++        user.setPassword(passwordEncoder.encode(user.getPassword()));
++        return new ResponseEntity<>(userService.save(user), HttpStatus.CREATED);
++    }
++}
+Index: Authentification-Service/src/main/java/org/authentificationservice/controller/UtilisateurController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/controller/UtilisateurController.java b/Authentification-Service/src/main/java/org/authentificationservice/controller/UtilisateurController.java
+new file mode 100644
+--- /dev/null	
++++ b/Authentification-Service/src/main/java/org/authentificationservice/controller/UtilisateurController.java	
+@@ -0,0 +1,57 @@
++package org.authentificationservice.controller;
++
++import lombok.RequiredArgsConstructor;
++import org.authentificationservice.config.AuthenticationResponse;
++import org.authentificationservice.exception.UserNotFoundException;
++import org.authentificationservice.model.AuthenticationRequest;
++import org.authentificationservice.model.Utilisateur;
++import org.authentificationservice.service.UtilisateurService;
++import org.authentificationservice.util.JwtUtil;
++import org.springframework.http.HttpStatus;
++import org.springframework.http.ResponseEntity;
++import org.springframework.security.authentication.AuthenticationManager;
++import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
++import org.springframework.security.core.userdetails.UserDetails;
++import org.springframework.web.bind.annotation.*;
++
++@RestController
++@RequestMapping("/auth")
++@RequiredArgsConstructor
++@CrossOrigin(origins = "*")
++public class UtilisateurController {
++
++    private final AuthenticationManager authenticationManager;
++    private final UtilisateurService utilisateurService;
++    private final JwtUtil jwtUtil;
++
++    @PostMapping("/login")
++        public ResponseEntity<AuthenticationResponse> loginUser(@RequestBody AuthenticationRequest authenticationRequest) throws Exception {
++        authenticationManager.authenticate(
++                new UsernamePasswordAuthenticationToken(authenticationRequest.getUsername(), authenticationRequest.getPassword())
++        );
++        final UserDetails userDetails = utilisateurService.loadUserByUsername(authenticationRequest.getUsername());
++        Utilisateur utilisateur = utilisateurService.getUserByUsername(authenticationRequest.getUsername());
++        final String jwt = jwtUtil.generateToken(userDetails,utilisateur.getRole());
++        return new ResponseEntity<>(new AuthenticationResponse(jwt), HttpStatus.OK);
++    }
++
++    @GetMapping("/getIdByUserName/{username}")
++    public ResponseEntity<?> getIdByUserName(@PathVariable("username") String username) {
++        try {
++            Utilisateur user = utilisateurService.getUserByUsername(username);
++            return ResponseEntity.ok(user.getId());
++        } catch (UserNotFoundException e) {
++            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
++        }
++    }
++    @GetMapping("/getUserByIdUser/{id}")
++    public ResponseEntity<?> getUserById(@PathVariable("id") Long id) {
++        try {
++            Utilisateur user = utilisateurService.getUserById(id);
++            return ResponseEntity.ok(user);
++        } catch (UserNotFoundException e) {
++            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
++        }
++    }
++
++}
+Index: Authentification-Service/src/main/java/org/authentificationservice/config/JwtRequestFilter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/config/JwtRequestFilter.java b/Authentification-Service/src/main/java/org/authentificationservice/config/JwtRequestFilter.java
+new file mode 100644
+--- /dev/null	
++++ b/Authentification-Service/src/main/java/org/authentificationservice/config/JwtRequestFilter.java	
+@@ -0,0 +1,57 @@
++package org.authentificationservice.config;
++
++import jakarta.servlet.FilterChain;
++import jakarta.servlet.ServletException;
++import jakarta.servlet.http.HttpServletRequest;
++import jakarta.servlet.http.HttpServletResponse;
++import lombok.AllArgsConstructor;
++import lombok.RequiredArgsConstructor;
++import org.authentificationservice.service.UtilisateurService;
++import org.authentificationservice.util.JwtUtil;
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
++import org.springframework.security.core.context.SecurityContextHolder;
++import org.springframework.security.core.userdetails.UserDetails;
++import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
++import org.springframework.stereotype.Component;
++import org.springframework.web.filter.OncePerRequestFilter;
++
++import java.io.IOException;
++
++@Component
++@AllArgsConstructor
++@RequiredArgsConstructor
++public class JwtRequestFilter extends OncePerRequestFilter {
++    @Autowired
++    private JwtUtil jwtUtil;
++    @Autowired
++    private UtilisateurService utilisateurService;
++
++    @Override
++    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
++        final String authorizationHeader = request.getHeader("Authorization");
++
++        String username = null;
++        String jwt = null;
++
++        if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
++            jwt = authorizationHeader.substring(7);
++            username = jwtUtil.extractUsername(jwt);
++        }
++
++        if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
++
++            UserDetails userDetails = this.utilisateurService.loadUserByUsername(username);
++
++            if (jwtUtil.validateToken(jwt, userDetails)) {
++
++                UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(
++                        userDetails, null, userDetails.getAuthorities());
++                usernamePasswordAuthenticationToken
++                        .setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
++                SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
++            }
++        }
++        filterChain.doFilter(request, response);
++    }
++}
+Index: Authentification-Service/src/main/java/org/authentificationservice/config/SecurityConfig.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/config/SecurityConfig.java b/Authentification-Service/src/main/java/org/authentificationservice/config/SecurityConfig.java
+new file mode 100644
+--- /dev/null	
++++ b/Authentification-Service/src/main/java/org/authentificationservice/config/SecurityConfig.java	
+@@ -0,0 +1,66 @@
++package org.authentificationservice.config;
++
++
++import lombok.RequiredArgsConstructor;
++import org.authentificationservice.service.UtilisateurService;
++import org.authentificationservice.util.JwtUtil;
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.context.annotation.Bean;
++import org.springframework.context.annotation.Configuration;
++import org.springframework.security.authentication.AuthenticationManager;
++import org.springframework.security.config.Customizer;
++import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
++import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
++import org.springframework.security.config.annotation.web.builders.HttpSecurity;
++import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
++import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
++import org.springframework.security.config.http.SessionCreationPolicy;
++import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
++import org.springframework.security.crypto.password.PasswordEncoder;
++import org.springframework.security.web.SecurityFilterChain;
++import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
++
++@Configuration
++@EnableWebSecurity
++@EnableGlobalMethodSecurity(prePostEnabled = true)
++@RequiredArgsConstructor
++public class SecurityConfig{
++
++    @Autowired
++    private UtilisateurService utilisateurService;
++
++    @Autowired
++    private JwtUtil jwtUtil;
++
++    @Bean
++    public PasswordEncoder passwordEncoder() {
++        return new BCryptPasswordEncoder();
++    }
++
++    @Bean
++    public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {
++        return authenticationConfiguration.getAuthenticationManager();
++    }
++
++    @Bean
++    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
++        http.csrf(AbstractHttpConfigurer::disable)
++                .authorizeRequests(req -> req
++                        .requestMatchers("/user/register/**", "/admin/register/**","/technicien/register/**","/utilisateur/login/**").permitAll()
++                        .anyRequest().authenticated()
++                )
++                .sessionManagement(session -> session
++                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
++                );
++        http.cors(Customizer.withDefaults());
++
++        http.addFilterBefore(jwtRequestFilter(), UsernamePasswordAuthenticationFilter.class);
++
++        return http.build();
++    }
++
++    @Bean
++    public JwtRequestFilter jwtRequestFilter() {
++        return new JwtRequestFilter(jwtUtil, utilisateurService);
++    }
++}
+Index: Authentification-Service/src/main/java/org/authentificationservice/service/UtilisateurService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/service/UtilisateurService.java b/Authentification-Service/src/main/java/org/authentificationservice/service/UtilisateurService.java
+new file mode 100644
+--- /dev/null	
++++ b/Authentification-Service/src/main/java/org/authentificationservice/service/UtilisateurService.java	
+@@ -0,0 +1,48 @@
++package org.authentificationservice.service;
++
++import lombok.RequiredArgsConstructor;
++import org.authentificationservice.model.Utilisateur;
++import org.authentificationservice.repository.UtilisateurRepository;
++import org.springframework.security.core.userdetails.UserDetails;
++import org.springframework.security.core.userdetails.UserDetailsService;
++import org.springframework.security.core.userdetails.UsernameNotFoundException;
++import org.springframework.stereotype.Service;
++import org.springframework.transaction.annotation.Transactional;
++
++import java.util.Optional;
++
++@Service
++@Transactional
++@RequiredArgsConstructor
++public class UtilisateurService implements UserDetailsService {
++    private final UtilisateurRepository utilisateurRepository;
++
++
++    @Override
++    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
++        Utilisateur utilisateur = utilisateurRepository.findByUsername(username);
++        if (utilisateur == null) {
++            throw new UsernameNotFoundException("User not found");
++        }
++        System.out.println(utilisateur.getUsername());
++        System.out.println(utilisateur.getPassword());
++        System.out.println(utilisateur.getAuthorities());
++        return new org.springframework.security.core.userdetails.User(utilisateur.getUsername(), utilisateur.getPassword(), utilisateur.getAuthorities());
++    }
++
++    public Utilisateur getUserByUsername(String username) {
++        Utilisateur utilisateur = utilisateurRepository.findByUsername(username);
++        if (utilisateur == null) {
++            throw new UsernameNotFoundException("User not found");
++        }
++        return utilisateur;
++    }
++
++    public Utilisateur getUserById(Long id) {
++        Optional<Utilisateur> utilisateur = utilisateurRepository.findById(id);
++        if (utilisateur.isEmpty()) {
++            throw new UsernameNotFoundException("User not found");
++        }
++        return utilisateur.get();
++    }
++}
+Index: Authentification-Service/src/main/java/org/authentificationservice/repository/UtilisateurRepository.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/repository/UtilisateurRepository.java b/Authentification-Service/src/main/java/org/authentificationservice/repository/UtilisateurRepository.java
+new file mode 100644
+--- /dev/null	
++++ b/Authentification-Service/src/main/java/org/authentificationservice/repository/UtilisateurRepository.java	
+@@ -0,0 +1,10 @@
++package org.authentificationservice.repository;
++
++import org.authentificationservice.model.Utilisateur;
++import org.springframework.data.jpa.repository.JpaRepository;
++import org.springframework.stereotype.Repository;
++
++@Repository
++public interface UtilisateurRepository extends JpaRepository<Utilisateur, Long> {
++    Utilisateur findByUsername(String username);
++}
+Index: Authentification-Service/src/main/java/org/authentificationservice/repository/UserRepository.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/repository/UserRepository.java b/Authentification-Service/src/main/java/org/authentificationservice/repository/UserRepository.java
+new file mode 100644
+--- /dev/null	
++++ b/Authentification-Service/src/main/java/org/authentificationservice/repository/UserRepository.java	
+@@ -0,0 +1,10 @@
++package org.authentificationservice.repository;
++
++import org.authentificationservice.model.User;
++import org.springframework.data.jpa.repository.JpaRepository;
++import org.springframework.stereotype.Repository;
++
++@Repository
++public interface UserRepository extends JpaRepository<User, Long> {
++    User findByUsername(String username);
++}
+Index: Authentification-Service/src/main/java/org/authentificationservice/repository/AdminRepository.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/repository/AdminRepository.java b/Authentification-Service/src/main/java/org/authentificationservice/repository/AdminRepository.java
+new file mode 100644
+--- /dev/null	
++++ b/Authentification-Service/src/main/java/org/authentificationservice/repository/AdminRepository.java	
+@@ -0,0 +1,10 @@
++package org.authentificationservice.repository;
++
++
++import org.authentificationservice.model.Admin;
++import org.springframework.data.jpa.repository.JpaRepository;
++import org.springframework.stereotype.Repository;
++
++@Repository
++public interface AdminRepository extends JpaRepository<Admin, Long> {
++}
+Index: Authentification-Service/src/main/java/org/authentificationservice/enums/Role.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/enums/Role.java b/Authentification-Service/src/main/java/org/authentificationservice/enums/Role.java
+new file mode 100644
+--- /dev/null	
++++ b/Authentification-Service/src/main/java/org/authentificationservice/enums/Role.java	
+@@ -0,0 +1,6 @@
++package org.authentificationservice.enums;
++
++public enum Role {
++    ADMIN,
++    USER
++}
+Index: Authentification-Service/src/main/java/org/authentificationservice/model/Utilisateur.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/model/Utilisateur.java b/Authentification-Service/src/main/java/org/authentificationservice/model/Utilisateur.java
+new file mode 100644
+--- /dev/null	
++++ b/Authentification-Service/src/main/java/org/authentificationservice/model/Utilisateur.java	
+@@ -0,0 +1,70 @@
++package org.authentificationservice.model;
++
++import jakarta.persistence.*;
++import lombok.AllArgsConstructor;
++import lombok.Getter;
++import lombok.NoArgsConstructor;
++import lombok.Setter;
++import org.authentificationservice.enums.Role;
++import org.springframework.security.core.GrantedAuthority;
++import org.springframework.security.core.authority.SimpleGrantedAuthority;
++import org.springframework.security.core.userdetails.UserDetails;
++
++import java.util.Collection;
++import java.util.List;
++
++@Entity
++@Getter
++@Setter
++@NoArgsConstructor
++@AllArgsConstructor
++@Inheritance(strategy= InheritanceType.JOINED)
++@DiscriminatorColumn(name = "role")
++public abstract class Utilisateur implements UserDetails {
++    @Id
++    @GeneratedValue(strategy = GenerationType.IDENTITY)
++    private Long id;
++    @Column
++    private String username;
++    @Column
++    private String password;
++    @Column
++    private String email;
++    @Column
++    private String telephone;
++
++    @Enumerated(EnumType.STRING)
++    @Column(insertable = false, updatable = false)
++    private Role role;
++
++    @Override
++    public Collection<? extends GrantedAuthority> getAuthorities() {
++        if (role == null) {
++            System.out.println("Role is not initialized.");
++            return List.of();
++        }
++
++        return List.of(new SimpleGrantedAuthority(role.name()));
++    }
++
++    @Override
++    public boolean isAccountNonExpired() {
++        return UserDetails.super.isAccountNonExpired();
++    }
++
++    @Override
++    public boolean isAccountNonLocked() {
++        return UserDetails.super.isAccountNonLocked();
++    }
++
++    @Override
++    public boolean isCredentialsNonExpired() {
++        return UserDetails.super.isCredentialsNonExpired();
++    }
++
++    @Override
++    public boolean isEnabled() {
++        return UserDetails.super.isEnabled();
++    }
++
++}
+Index: Authentification-Service/src/main/java/org/authentificationservice/model/User.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/model/User.java b/Authentification-Service/src/main/java/org/authentificationservice/model/User.java
+new file mode 100644
+--- /dev/null	
++++ b/Authentification-Service/src/main/java/org/authentificationservice/model/User.java	
+@@ -0,0 +1,16 @@
++package org.authentificationservice.model;
++
++import jakarta.persistence.DiscriminatorValue;
++import jakarta.persistence.Entity;
++import lombok.AllArgsConstructor;
++import lombok.Getter;
++import lombok.Setter;
++
++@Entity
++@Getter
++@Setter
++@AllArgsConstructor
++@DiscriminatorValue("USER")
++public class User extends Utilisateur{
++
++}

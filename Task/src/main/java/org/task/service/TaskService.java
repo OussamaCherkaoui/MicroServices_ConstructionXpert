@@ -1,8 +1,10 @@
 package org.task.service;
 
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
+import org.task.Project.ProjectRest;
 import org.task.exception.ProjectNotFoundException;
 import org.task.exception.TaskNotFoundException;
 import org.task.model.Task;
@@ -13,10 +15,8 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class TaskService {
-    private final RestTemplate restTemplate;
+    private final ProjectRest projectRest;
     private  final TaskRepository taskRepository;
-
-    private static final String projectServiceUrl = "http://project/apiProject/";
 
     public Task createTask(Task task) throws ProjectNotFoundException {
         validateProjectExists(task.getProjectId());
@@ -49,8 +49,7 @@ public class TaskService {
         if (projectId == null) {
             throw new IllegalArgumentException("Project ID cannot be null");
         }
-        String url = projectServiceUrl + "/isExist/" + projectId ;
-        Boolean exists = restTemplate.getForObject(url, Boolean.class);
+        Boolean exists = projectRest.isExist(projectId);
         if (exists == null || !exists) {
             throw new ProjectNotFoundException();
         }

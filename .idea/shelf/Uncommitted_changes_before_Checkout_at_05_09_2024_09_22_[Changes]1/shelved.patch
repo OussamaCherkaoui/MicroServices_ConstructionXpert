@@ -1,0 +1,447 @@
+Index: Task/src/main/java/org/task/config/RestTemplatConfig.java
+===================================================================
+diff --git a/Task/src/main/java/org/task/config/RestTemplatConfig.java b/Task/src/main/java/org/task/config/RestTemplatConfig.java
+deleted file mode 100644
+--- a/Task/src/main/java/org/task/config/RestTemplatConfig.java	
++++ /dev/null	
+@@ -1,15 +0,0 @@
+-package org.task.config;
+-
+-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+-import org.springframework.context.annotation.Bean;
+-import org.springframework.context.annotation.Configuration;
+-import org.springframework.web.client.RestTemplate;
+-
+-@Configuration
+-public class RestTemplatConfig {
+-    @Bean
+-    @LoadBalanced
+-    public RestTemplate restTemplate() {
+-        return new RestTemplate();
+-    }
+-}
+Index: Ressource/src/main/java/org/ressource/config/RestTemplatConfig.java
+===================================================================
+diff --git a/Ressource/src/main/java/org/ressource/config/RestTemplatConfig.java b/Ressource/src/main/java/org/ressource/config/RestTemplatConfig.java
+deleted file mode 100644
+--- a/Ressource/src/main/java/org/ressource/config/RestTemplatConfig.java	
++++ /dev/null	
+@@ -1,15 +0,0 @@
+-package org.ressource.config;
+-
+-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+-import org.springframework.context.annotation.Bean;
+-import org.springframework.context.annotation.Configuration;
+-import org.springframework.web.client.RestTemplate;
+-
+-@Configuration
+-public class RestTemplatConfig {
+-    @Bean
+-    @LoadBalanced
+-    public RestTemplate restTemplate() {
+-        return new RestTemplate();
+-    }
+-}
+Index: Ressource/src/main/java/org/ressource/service/RessourceService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.ressource.service;\r\n\r\nimport lombok.RequiredArgsConstructor;\r\nimport org.ressource.exception.RessourceNotFoundException;\r\nimport org.ressource.exception.TaskNotFoundException;\r\nimport org.ressource.model.Ressource;\r\nimport org.ressource.repository.RessourceRepository;\r\nimport org.springframework.stereotype.Service;\r\nimport org.springframework.web.client.RestTemplate;\r\n\r\nimport java.util.List;\r\n\r\n@Service\r\n@RequiredArgsConstructor\r\npublic class RessourceService {\r\n    private final RessourceRepository resourceRepository;\r\n    private static final String taskServiceUrl = \"http://Task/apiTask\";\r\n    private final RestTemplate restTemplate;\r\n\r\n    public Ressource createResource(Ressource resource) throws TaskNotFoundException {\r\n        validateTaskExists(resource.getTaskId());\r\n        return resourceRepository.save(resource);\r\n    }\r\n\r\n    public List<Ressource> getAllResources() {\r\n        return resourceRepository.findAll();\r\n    }\r\n\r\n    public Ressource getResourceById(Long id) throws RessourceNotFoundException {\r\n        return resourceRepository.findById(id)\r\n                .orElseThrow(RessourceNotFoundException::new);\r\n    }\r\n    private void validateTaskExists(Long taskId) throws TaskNotFoundException {\r\n        if (taskId == null) {\r\n            throw new IllegalArgumentException(\"Task ID cannot be null\");\r\n        }\r\n        String url = taskServiceUrl + \"/isExist/\" + taskId ;\r\n        Boolean exists = restTemplate.getForObject(url, Boolean.class);\r\n        if (exists == null || !exists) {\r\n            throw new TaskNotFoundException();\r\n        }\r\n    }\r\n    public Ressource updateResource(Ressource ressource){\r\n        return resourceRepository.save(ressource);\r\n    }\r\n\r\n    public void deleteResource(Long id) {\r\n        resourceRepository.deleteById(id);\r\n    }\r\n\r\n    public List<Ressource> getResourcesByTaskId(Long taskId) {\r\n        return resourceRepository.findByTaskId(taskId);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Ressource/src/main/java/org/ressource/service/RessourceService.java b/Ressource/src/main/java/org/ressource/service/RessourceService.java
+--- a/Ressource/src/main/java/org/ressource/service/RessourceService.java	
++++ b/Ressource/src/main/java/org/ressource/service/RessourceService.java	
+@@ -5,6 +5,7 @@
+ import org.ressource.exception.TaskNotFoundException;
+ import org.ressource.model.Ressource;
+ import org.ressource.repository.RessourceRepository;
++import org.ressource.task.TaskRest;
+ import org.springframework.stereotype.Service;
+ import org.springframework.web.client.RestTemplate;
+ 
+@@ -14,8 +15,7 @@
+ @RequiredArgsConstructor
+ public class RessourceService {
+     private final RessourceRepository resourceRepository;
+-    private static final String taskServiceUrl = "http://Task/apiTask";
+-    private final RestTemplate restTemplate;
++    private final TaskRest taskRest;
+ 
+     public Ressource createResource(Ressource resource) throws TaskNotFoundException {
+         validateTaskExists(resource.getTaskId());
+@@ -34,8 +34,7 @@
+         if (taskId == null) {
+             throw new IllegalArgumentException("Task ID cannot be null");
+         }
+-        String url = taskServiceUrl + "/isExist/" + taskId ;
+-        Boolean exists = restTemplate.getForObject(url, Boolean.class);
++        Boolean exists = taskRest.isExist(taskId);
+         if (exists == null || !exists) {
+             throw new TaskNotFoundException();
+         }
+@@ -48,7 +47,8 @@
+         resourceRepository.deleteById(id);
+     }
+ 
+-    public List<Ressource> getResourcesByTaskId(Long taskId) {
++    public List<Ressource> getResourcesByTaskId(Long taskId) throws TaskNotFoundException {
++        validateTaskExists(taskId);
+         return resourceRepository.findByTaskId(taskId);
+     }
+ }
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\r\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\">\r\n\r\n    <parent>\r\n        <groupId>org.springframework.boot</groupId>\r\n        <artifactId>spring-boot-starter-parent</artifactId>\r\n        <version>3.3.2</version>\r\n        <relativePath/> <!-- lookup parent from repository -->\r\n    </parent>\r\n\r\n    <modelVersion>4.0.0</modelVersion>\r\n    <groupId>org.example</groupId>\r\n    <artifactId>ConstructionXpert</artifactId>\r\n    <version>1.0-SNAPSHOT</version>\r\n    <packaging>pom</packaging>\r\n\r\n    <modules>\r\n        <module>Project</module>\r\n        <module>Task</module>\r\n        <module>Ressource</module>\r\n        <module>Eureka</module>\r\n    </modules>\r\n\r\n    <properties>\r\n        <maven.compiler.source>21</maven.compiler.source>\r\n        <maven.compiler.target>21</maven.compiler.target>\r\n        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>\r\n    </properties>\r\n\r\n    <dependencies>\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter</artifactId>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-data-jpa</artifactId>\r\n            <version>3.1.0</version>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-web</artifactId>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.flywaydb</groupId>\r\n            <artifactId>flyway-core</artifactId>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.flywaydb</groupId>\r\n            <artifactId>flyway-mysql</artifactId>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>com.mysql</groupId>\r\n            <artifactId>mysql-connector-j</artifactId>\r\n            <scope>runtime</scope>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.projectlombok</groupId>\r\n            <artifactId>lombok</artifactId>\r\n            <optional>true</optional>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-test</artifactId>\r\n            <scope>test</scope>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.springdoc</groupId>\r\n            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>\r\n            <version>2.6.0</version>\r\n        </dependency>\r\n    </dependencies>\r\n    <dependencyManagement>\r\n        <dependencies>\r\n            <dependency>\r\n                <groupId>org.springframework.cloud</groupId>\r\n                <artifactId>spring-cloud-dependencies</artifactId>\r\n                <version>2023.0.3</version>\r\n                <type>pom</type>\r\n                <scope>import</scope>\r\n            </dependency>\r\n        </dependencies>\r\n    </dependencyManagement>\r\n    <build>\r\n        <pluginManagement>\r\n            <plugins>\r\n                <plugin>\r\n                    <groupId>org.springframework.boot</groupId>\r\n                    <artifactId>spring-boot-maven-plugin</artifactId>\r\n                </plugin>\r\n            </plugins>\r\n        </pluginManagement>\r\n    </build>\r\n\r\n</project>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pom.xml b/pom.xml
+--- a/pom.xml	
++++ b/pom.xml	
+@@ -31,6 +31,10 @@
+ 
+     <dependencies>
+         <dependency>
++            <groupId>org.springframework.cloud</groupId>
++            <artifactId>spring-cloud-starter-openfeign</artifactId>
++        </dependency>
++        <dependency>
+             <groupId>org.springframework.boot</groupId>
+             <artifactId>spring-boot-starter</artifactId>
+         </dependency>
+Index: Ressource/src/main/java/org/ressource/controller/RessourceController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.ressource.controller;\r\n\r\n\r\nimport org.ressource.exception.RessourceNotFoundException;\r\nimport org.ressource.exception.TaskNotFoundException;\r\nimport org.ressource.model.Ressource;\r\nimport org.ressource.service.RessourceService;\r\nimport org.springframework.beans.factory.annotation.Autowired;\r\nimport org.springframework.http.ResponseEntity;\r\nimport org.springframework.web.bind.annotation.*;\r\n\r\nimport java.util.List;\r\n\r\n@RestController\r\n@RequestMapping(\"/apiRessource\")\r\npublic class RessourceController {\r\n    @Autowired\r\n    private RessourceService ressourceService;\r\n\r\n    @PostMapping(\"/saveRessource\")\r\n    public ResponseEntity<Ressource> createResource(@RequestBody Ressource resource) throws TaskNotFoundException {\r\n        Ressource createdResource = ressourceService.createResource(resource);\r\n        return ResponseEntity.ok(createdResource);\r\n    }\r\n\r\n    @GetMapping(\"/getAllRessources\")\r\n    public ResponseEntity<List<Ressource>> getAllResources() {\r\n        return ResponseEntity.ok(ressourceService.getAllResources());\r\n    }\r\n\r\n    @GetMapping(\"/getRessourceById/{id}\")\r\n    public ResponseEntity<Ressource> getResourceById(@PathVariable Long id) throws RessourceNotFoundException {\r\n        return ResponseEntity.ok(ressourceService.getResourceById(id));\r\n    }\r\n\r\n    @PutMapping(\"/updateRessource\")\r\n    public ResponseEntity<Ressource> updateResource(@RequestBody Ressource ressource) throws RessourceNotFoundException {\r\n        return ResponseEntity.ok(ressourceService.updateResource(ressource));\r\n    }\r\n\r\n    @DeleteMapping(\"/deleteRessource/{id}\")\r\n    public ResponseEntity<Void> deleteResource(@PathVariable Long id) {\r\n        ressourceService.deleteResource(id);\r\n        return ResponseEntity.ok().build();\r\n    }\r\n\r\n    @GetMapping(\"/getRessourceByIdTask/{taskId}\")\r\n    public ResponseEntity<List<Ressource>> getResourcesByTaskId(@PathVariable Long taskId) {\r\n        return ResponseEntity.ok(ressourceService.getResourcesByTaskId(taskId));\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Ressource/src/main/java/org/ressource/controller/RessourceController.java b/Ressource/src/main/java/org/ressource/controller/RessourceController.java
+--- a/Ressource/src/main/java/org/ressource/controller/RessourceController.java	
++++ b/Ressource/src/main/java/org/ressource/controller/RessourceController.java	
+@@ -45,7 +45,7 @@
+     }
+ 
+     @GetMapping("/getRessourceByIdTask/{taskId}")
+-    public ResponseEntity<List<Ressource>> getResourcesByTaskId(@PathVariable Long taskId) {
++    public ResponseEntity<List<Ressource>> getResourcesByTaskId(@PathVariable Long taskId) throws TaskNotFoundException {
+         return ResponseEntity.ok(ressourceService.getResourcesByTaskId(taskId));
+     }
+ 
+Index: Task/src/main/java/org/task/service/TaskService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.task.service;\r\n\r\nimport lombok.RequiredArgsConstructor;\r\nimport org.springframework.stereotype.Service;\r\nimport org.springframework.web.client.RestTemplate;\r\nimport org.task.exception.ProjectNotFoundException;\r\nimport org.task.exception.TaskNotFoundException;\r\nimport org.task.model.Task;\r\nimport org.task.repository.TaskRepository;\r\n\r\nimport java.util.List;\r\n\r\n@Service\r\n@RequiredArgsConstructor\r\npublic class TaskService {\r\n    private final RestTemplate restTemplate;\r\n    private  final TaskRepository taskRepository;\r\n\r\n    private static final String projectServiceUrl = \"http://project/apiProject/\";\r\n\r\n    public Task createTask(Task task) throws ProjectNotFoundException {\r\n        validateProjectExists(task.getProjectId());\r\n        return taskRepository.save(task);\r\n    }\r\n\r\n    public List<Task> getAllTasks() {\r\n        return taskRepository.findAll();\r\n    }\r\n\r\n    public Task getTaskById(Long id) throws TaskNotFoundException {\r\n        return taskRepository.findById(id)\r\n                .orElseThrow(TaskNotFoundException::new);\r\n    }\r\n\r\n    public Task updateTask(Task task) {\r\n        return taskRepository.save(task);\r\n    }\r\n\r\n    public void deleteTask(Long id) {\r\n        taskRepository.deleteById(id);\r\n    }\r\n\r\n    public List<Task> getTasksByProjectId(Long projectId) throws ProjectNotFoundException {\r\n        validateProjectExists(projectId);\r\n        return taskRepository.findByProjectId(projectId);\r\n    }\r\n\r\n    private void validateProjectExists(Long projectId) throws ProjectNotFoundException {\r\n        if (projectId == null) {\r\n            throw new IllegalArgumentException(\"Project ID cannot be null\");\r\n        }\r\n        String url = projectServiceUrl + \"/isExist/\" + projectId ;\r\n        Boolean exists = restTemplate.getForObject(url, Boolean.class);\r\n        if (exists == null || !exists) {\r\n            throw new ProjectNotFoundException();\r\n        }\r\n    }\r\n\r\n\r\n    public Boolean existTask(Long id) {\r\n        return taskRepository.findById(id).isPresent();\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Task/src/main/java/org/task/service/TaskService.java b/Task/src/main/java/org/task/service/TaskService.java
+--- a/Task/src/main/java/org/task/service/TaskService.java	
++++ b/Task/src/main/java/org/task/service/TaskService.java	
+@@ -1,8 +1,10 @@
+ package org.task.service;
+ 
++import lombok.NoArgsConstructor;
+ import lombok.RequiredArgsConstructor;
++import org.springframework.beans.factory.annotation.Autowired;
+ import org.springframework.stereotype.Service;
+-import org.springframework.web.client.RestTemplate;
++import org.task.Project.ProjectRest;
+ import org.task.exception.ProjectNotFoundException;
+ import org.task.exception.TaskNotFoundException;
+ import org.task.model.Task;
+@@ -13,11 +15,9 @@
+ @Service
+ @RequiredArgsConstructor
+ public class TaskService {
+-    private final RestTemplate restTemplate;
++    private final ProjectRest projectRest;
+     private  final TaskRepository taskRepository;
+ 
+-    private static final String projectServiceUrl = "http://project/apiProject/";
+-
+     public Task createTask(Task task) throws ProjectNotFoundException {
+         validateProjectExists(task.getProjectId());
+         return taskRepository.save(task);
+@@ -49,8 +49,7 @@
+         if (projectId == null) {
+             throw new IllegalArgumentException("Project ID cannot be null");
+         }
+-        String url = projectServiceUrl + "/isExist/" + projectId ;
+-        Boolean exists = restTemplate.getForObject(url, Boolean.class);
++        Boolean exists = projectRest.isExist(projectId);
+         if (exists == null || !exists) {
+             throw new ProjectNotFoundException();
+         }
+Index: Authentification-Service/src/main/java/org/authentificationservice/service/UserService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/service/UserService.java b/Authentification-Service/src/main/java/org/authentificationservice/service/UserService.java
+new file mode 100644
+--- /dev/null	
++++ b/Authentification-Service/src/main/java/org/authentificationservice/service/UserService.java	
+@@ -0,0 +1,30 @@
++package org.authentificationservice.service;
++
++
++import lombok.RequiredArgsConstructor;
++import org.authentificationservice.model.User;
++import org.authentificationservice.repository.UserRepository;
++import org.springframework.stereotype.Service;
++import org.springframework.transaction.annotation.Transactional;
++
++import java.util.Optional;
++
++@Service
++@Transactional
++@RequiredArgsConstructor
++public class UserService {
++
++
++    private final UserRepository userRepository;
++
++    public User save(User user)
++    {
++        return userRepository.save(user);
++    }
++
++
++    public User getById(Long idUser) {
++        Optional<User> user = userRepository.findById(idUser);
++        return user.get();
++    }
++}
+Index: Authentification-Service/src/main/java/org/authentificationservice/service/AdminService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/service/AdminService.java b/Authentification-Service/src/main/java/org/authentificationservice/service/AdminService.java
+new file mode 100644
+--- /dev/null	
++++ b/Authentification-Service/src/main/java/org/authentificationservice/service/AdminService.java	
+@@ -0,0 +1,18 @@
++package org.authentificationservice.service;
++
++import lombok.RequiredArgsConstructor;
++import org.authentificationservice.model.Admin;
++import org.authentificationservice.repository.AdminRepository;
++import org.springframework.stereotype.Service;
++import org.springframework.transaction.annotation.Transactional;
++
++@Service
++@Transactional
++@RequiredArgsConstructor
++public class AdminService {
++    private final AdminRepository adminRepository;
++    public Admin save(Admin admin)
++    {
++        return adminRepository.save(admin);
++    }
++}
+Index: Authentification-Service/src/main/java/org/authentificationservice/util/JwtUtil.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/util/JwtUtil.java b/Authentification-Service/src/main/java/org/authentificationservice/util/JwtUtil.java
+new file mode 100644
+--- /dev/null	
++++ b/Authentification-Service/src/main/java/org/authentificationservice/util/JwtUtil.java	
+@@ -0,0 +1,73 @@
++package org.authentificationservice.util;
++
++import io.jsonwebtoken.Claims;
++import io.jsonwebtoken.Jwts;
++import io.jsonwebtoken.SignatureAlgorithm;
++import io.jsonwebtoken.io.Decoders;
++import io.jsonwebtoken.security.Keys;
++import org.authentificationservice.enums.Role;
++import org.springframework.security.core.userdetails.UserDetails;
++import org.springframework.stereotype.Service;
++
++import java.security.Key;
++import java.util.Date;
++import java.util.HashMap;
++import java.util.Map;
++import java.util.function.Function;
++
++@Service
++public class JwtUtil {
++
++    private static final String SECRET_KEY = "671491AE98362741F722202EED3288E8FF2508B35315ADBF75EEB3195A926B40";
++    public String extractUsername(String token) {
++        return extractClaim(token, Claims::getSubject);
++    }
++
++    public Date extractExpiration(String token) {
++        return extractClaim(token, Claims::getExpiration);
++    }
++
++    public <T> T extractClaim(String token, Function<Claims, T> claimsResolver) {
++        final Claims claims = extractAllClaims(token);
++        return claimsResolver.apply(claims);
++    }
++
++    private Claims extractAllClaims(String token) {
++        return Jwts
++                .parserBuilder()
++                .setSigningKey(getKey())
++                .build()
++                .parseClaimsJws(token)
++                .getBody();
++    }
++
++    private Boolean isTokenExpired(String token) {
++        return extractExpiration(token).before(new Date());
++    }
++
++    public String generateToken(UserDetails userDetails, Role role) {
++        System.out.println(role);
++        System.out.println(userDetails.getUsername());
++        Map<String, String> claims = new HashMap<>();
++        claims.put("role",role.name());
++        return createToken(claims, userDetails.getUsername());
++    }
++
++    private String createToken(Map<String, String> claims, String subject) {
++        var jwt = Jwts.builder().setClaims(claims).setSubject(subject).setIssuedAt(new Date(System.currentTimeMillis()))
++                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 10))
++                .signWith(getKey(),SignatureAlgorithm.HS256).compact();
++        System.out.println(jwt);
++        return jwt;
++    }
++
++    private Key getKey(){
++        byte[] keyBytes = Decoders.BASE64.decode(SECRET_KEY);
++        return Keys.hmacShaKeyFor(keyBytes);
++    }
++
++    public Boolean validateToken(String token, UserDetails userDetails) {
++        final String username = extractUsername(token);
++        return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
++    }
++}
+Index: Ressource/src/main/java/org/ressource/task/TaskRest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Ressource/src/main/java/org/ressource/task/TaskRest.java b/Ressource/src/main/java/org/ressource/task/TaskRest.java
+new file mode 100644
+--- /dev/null	
++++ b/Ressource/src/main/java/org/ressource/task/TaskRest.java	
+@@ -0,0 +1,11 @@
++package org.ressource.task;
++
++import org.springframework.cloud.openfeign.FeignClient;
++import org.springframework.web.bind.annotation.GetMapping;
++import org.springframework.web.bind.annotation.PathVariable;
++
++@FeignClient(name = "TASK")
++public interface TaskRest {
++    @GetMapping("/apiTask/isExist/{id}")
++    Boolean isExist(@PathVariable Long id);
++}
+Index: Task/src/main/java/org/task/Project/ProjectRest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Task/src/main/java/org/task/Project/ProjectRest.java b/Task/src/main/java/org/task/Project/ProjectRest.java
+new file mode 100644
+--- /dev/null	
++++ b/Task/src/main/java/org/task/Project/ProjectRest.java	
+@@ -0,0 +1,11 @@
++package org.task.Project;
++
++import org.springframework.cloud.openfeign.FeignClient;
++import org.springframework.web.bind.annotation.GetMapping;
++import org.springframework.web.bind.annotation.PathVariable;
++
++@FeignClient(name = "PROJECT")
++public interface ProjectRest {
++    @GetMapping("/apiProject/isExist/{id}")
++    Boolean isExist(@PathVariable Long id);
++}
+Index: Authentification-Service/src/main/resources/db/migration/V1_Create_User_Table.sql
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Authentification-Service/src/main/resources/db/migration/V1_Create_User_Table.sql b/Authentification-Service/src/main/resources/db/migration/V1_Create_User_Table.sql
+new file mode 100644
+--- /dev/null	
++++ b/Authentification-Service/src/main/resources/db/migration/V1_Create_User_Table.sql	
+@@ -0,0 +1,16 @@
++CREATE TABLE Utilisateur (
++                             id BIGINT AUTO_INCREMENT PRIMARY KEY,
++                             username VARCHAR(255) NOT NULL,
++                             password VARCHAR(255) NOT NULL,
++                             email VARCHAR(255) NOT NULL,
++                             telephone VARCHAR(255),
++                             role VARCHAR(255) NOT NULL
++);
++CREATE TABLE User (
++                      id BIGINT PRIMARY KEY,
++                      FOREIGN KEY (id) REFERENCES utilisateur(id)
++);
++CREATE TABLE Admin (
++                       id BIGINT PRIMARY KEY,
++                       FOREIGN KEY (id) REFERENCES utilisateur(id)
++);
+\ No newline at end of file
+Index: .idea/encodings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"Encoding\">\r\n    <file url=\"file://$PROJECT_DIR$/Eureka/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/Eureka/src/main/resources\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/Project/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/Project/src/main/resources\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/Ressource/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/Ressource/src/main/resources\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/Task/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/Task/src/main/resources\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/src/main/resources\" charset=\"UTF-8\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/encodings.xml b/.idea/encodings.xml
+--- a/.idea/encodings.xml	
++++ b/.idea/encodings.xml	
+@@ -1,6 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="Encoding">
++    <file url="file://$PROJECT_DIR$/Api-Gateway/src/main/java" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/Eureka/src/main/java" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/Eureka/src/main/resources" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/Project/src/main/java" charset="UTF-8" />
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/model/User.java b/Authentification-Service/src/main/java/org/authentificationservice/model/User.java
+new file mode 100644
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/model/Utilisateur.java b/Authentification-Service/src/main/java/org/authentificationservice/model/Utilisateur.java
+new file mode 100644
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/enums/Role.java b/Authentification-Service/src/main/java/org/authentificationservice/enums/Role.java
+new file mode 100644
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/config/AuthenticationResponse.java b/Authentification-Service/src/main/java/org/authentificationservice/config/AuthenticationResponse.java
+new file mode 100644
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/controller/UtilisateurController.java b/Authentification-Service/src/main/java/org/authentificationservice/controller/UtilisateurController.java
+new file mode 100644
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/controller/UserController.java b/Authentification-Service/src/main/java/org/authentificationservice/controller/UserController.java
+new file mode 100644
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/controller/AdminController.java b/Authentification-Service/src/main/java/org/authentificationservice/controller/AdminController.java
+new file mode 100644
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/exception/UserNotFoundException.java b/Authentification-Service/src/main/java/org/authentificationservice/exception/UserNotFoundException.java
+new file mode 100644
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/model/Admin.java b/Authentification-Service/src/main/java/org/authentificationservice/model/Admin.java
+new file mode 100644
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/model/AuthenticationRequest.java b/Authentification-Service/src/main/java/org/authentificationservice/model/AuthenticationRequest.java
+new file mode 100644
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/repository/AdminRepository.java b/Authentification-Service/src/main/java/org/authentificationservice/repository/AdminRepository.java
+new file mode 100644
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/repository/UserRepository.java b/Authentification-Service/src/main/java/org/authentificationservice/repository/UserRepository.java
+new file mode 100644
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/repository/UtilisateurRepository.java b/Authentification-Service/src/main/java/org/authentificationservice/repository/UtilisateurRepository.java
+new file mode 100644
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/service/UtilisateurService.java b/Authentification-Service/src/main/java/org/authentificationservice/service/UtilisateurService.java
+new file mode 100644
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/config/SecurityConfig.java b/Authentification-Service/src/main/java/org/authentificationservice/config/SecurityConfig.java
+new file mode 100644
+diff --git a/Authentification-Service/src/main/java/org/authentificationservice/config/JwtRequestFilter.java b/Authentification-Service/src/main/java/org/authentificationservice/config/JwtRequestFilter.java
+new file mode 100644
