@@ -4,64 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5300d228-cf8a-45a9-89d5-7b37aed8321b" name="Changes" comment="réaliser toutes les fonctionalités nécessaire">
-      <change afterPath="$PROJECT_DIR$/Api-Gateway/src/main/java/org/apigateway/filter/GlobalAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Api-Gateway/src/main/java/org/apigateway/filter/RouteValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Api-Gateway/src/main/java/org/apigateway/util/JwtUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/config/AuthenticationResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/config/JwtRequestFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/controller/AdminController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/controller/UtilisateurController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/enums/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/exception/UserNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/model/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/model/AuthenticationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/model/Utilisateur.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/repository/AdminRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/repository/UtilisateurRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/service/AdminService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/service/UtilisateurService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/util/JwtUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentification-Service/src/main/resources/db/migration/V1_Create_User_Table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/src/main/java/org/project/config/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/src/main/java/org/project/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/src/main/java/org/project/util/JwtUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/src/main/resources/db/migration/V2__Create_Table_Project.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/src/main/resources/db/migration/V3__Update_Table_Project.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ressource/src/main/java/org/ressource/config/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ressource/src/main/java/org/ressource/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ressource/src/main/java/org/ressource/task/TaskRest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ressource/src/main/java/org/ressource/util/JwtUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Task/src/main/java/org/task/Project/ProjectRest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Task/src/main/java/org/task/config/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Task/src/main/java/org/task/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Task/src/main/java/org/task/util/JwtUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="5300d228-cf8a-45a9-89d5-7b37aed8321b" name="Changes" comment="ajouter le service authentification et l api gateway ainsi que l implémentation de la partie de sécurité dans toutes les services">
+      <change afterPath="$PROJECT_DIR$/Api-Gateway/src/main/java/org/apigateway/filter/CorsGlobalConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eureka/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Eureka/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eureka/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Eureka/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Project/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/main/java/org/project/controller/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/main/java/org/project/controller/ProjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressource/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Ressource/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressource/src/main/java/org/ressource/RessourceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ressource/src/main/java/org/ressource/RessourceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressource/src/main/java/org/ressource/config/RestTemplatConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressource/src/main/java/org/ressource/controller/RessourceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ressource/src/main/java/org/ressource/controller/RessourceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressource/src/main/java/org/ressource/service/RessourceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ressource/src/main/java/org/ressource/service/RessourceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressource/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Ressource/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Task/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/src/main/java/org/task/TaskApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/src/main/java/org/task/TaskApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/src/main/java/org/task/config/RestTemplatConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/src/main/java/org/task/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/src/main/java/org/task/controller/TaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/src/main/java/org/task/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/src/main/java/org/task/service/TaskService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Task/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api-Gateway/src/main/java/org/apigateway/ApiGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Api-Gateway/src/main/java/org/apigateway/ApiGatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/controller/UtilisateurController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/controller/UtilisateurController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,60 +50,60 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.Api-Gateway [clean].executor": "Run",
-    "Maven.Api-Gateway [install].executor": "Run",
-    "Maven.Authentification-Service [clean].executor": "Run",
-    "Maven.Authentification-Service [install].executor": "Run",
-    "Maven.ConstructionXpert [clean].executor": "Run",
-    "Maven.ConstructionXpert [install].executor": "Run",
-    "Maven.ConstructionXpert [verify].executor": "Run",
-    "Maven.Eureka [clean].executor": "Run",
-    "Maven.Eureka [install].executor": "Run",
-    "Maven.Project [clean].executor": "Run",
-    "Maven.Project [install].executor": "Run",
-    "Maven.Project [verify].executor": "Run",
-    "Maven.Ressource [clean].executor": "Run",
-    "Maven.Ressource [install].executor": "Run",
-    "Maven.Task [clean].executor": "Run",
-    "Maven.Task [install].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.ApiGatewayApplication.executor": "Run",
-    "Spring Boot.AuthentificationServiceApplication.executor": "Run",
-    "Spring Boot.EurekaApplication.executor": "Run",
-    "Spring Boot.ProjectApplication (1).executor": "Run",
-    "Spring Boot.ProjectApplication.executor": "Run",
-    "Spring Boot.RessourceApplication.executor": "Run",
-    "Spring Boot.TaskApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "21",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/user/IdeaProjects/ConstructionXpert/Task/src/main/java/org/task",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "reactor",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.Api-Gateway [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Api-Gateway [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Authentification-Service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Authentification-Service [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.ConstructionXpert [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.ConstructionXpert [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.ConstructionXpert [verify].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Eureka [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Eureka [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Project [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Project [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Project [verify].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Ressource [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Ressource [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Task [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Task [install].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.AuthentificationServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.EurekaApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ProjectApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ProjectApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.RessourceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.TaskApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/IdeaProjects/ConstructionXpert/Task/src/main/java/org/task&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reactor&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mariadb",
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mariadb&quot;,
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -261,8 +208,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ProjectApplication" />
-        <item itemvalue="Spring Boot.RessourceApplication" />
         <item itemvalue="Spring Boot.TaskApplication" />
+        <item itemvalue="Spring Boot.RessourceApplication" />
         <item itemvalue="Spring Boot.EurekaApplication" />
         <item itemvalue="Spring Boot.ProjectApplication" />
       </list>
@@ -291,7 +238,10 @@
       <workItem from="1724939563941" duration="15174000" />
       <workItem from="1725006671272" duration="6252000" />
       <workItem from="1725565738196" duration="10648000" />
-      <workItem from="1725609925293" duration="19225000" />
+      <workItem from="1725609925293" duration="19654000" />
+      <workItem from="1725709079767" duration="599000" />
+      <workItem from="1725871332947" duration="10163000" />
+      <workItem from="1725956608379" duration="4861000" />
     </task>
     <task id="LOCAL-00001" summary="créer multimodel et model project">
       <option name="closed" value="true" />
@@ -333,7 +283,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725013916830</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ajouter le service authentification et l api gateway ainsi que l implémentation de la partie de sécurité dans toutes les services">
+      <option name="closed" value="true" />
+      <created>1725640131384</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1725640131384</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +302,8 @@
     <MESSAGE value="ajouter les dépendances nécessaire et fixer des erreur lors de configuration" />
     <MESSAGE value="ajouter flayway" />
     <MESSAGE value="réaliser toutes les fonctionalités nécessaire" />
-    <option name="LAST_COMMIT_MESSAGE" value="réaliser toutes les fonctionalités nécessaire" />
+    <MESSAGE value="ajouter le service authentification et l api gateway ainsi que l implémentation de la partie de sécurité dans toutes les services" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajouter le service authentification et l api gateway ainsi que l implémentation de la partie de sécurité dans toutes les services" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
