@@ -4,11 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5300d228-cf8a-45a9-89d5-7b37aed8321b" name="Changes" comment="ajouter le service authentification et l api gateway ainsi que l implémentation de la partie de sécurité dans toutes les services">
-      <change afterPath="$PROJECT_DIR$/Api-Gateway/src/main/java/org/apigateway/filter/CorsGlobalConfiguration.java" afterDir="false" />
+    <list default="true" id="5300d228-cf8a-45a9-89d5-7b37aed8321b" name="Changes" comment="modification du configuration">
+      <change afterPath="$PROJECT_DIR$/Ressource/src/main/java/org/ressource/config/AuthFeignInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task/src/main/java/org/task/config/AuthFeignInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api-Gateway/src/main/java/org/apigateway/ApiGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Api-Gateway/src/main/java/org/apigateway/ApiGatewayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/controller/UtilisateurController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Authentification-Service/src/main/java/org/authentificationservice/controller/UtilisateurController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressource/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Ressource/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressource/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Ressource/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Task/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task/src/main/java/org/task/Project/ProjectRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/src/main/java/org/task/Project/ProjectRest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task/src/main/java/org/task/TaskApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/src/main/java/org/task/TaskApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Task/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,9 +123,9 @@
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.ressource.config" />
       <recent name="org.ressource.exception" />
       <recent name="org.task.exception" />
-      <recent name="org.ressource.config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -207,8 +214,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ProjectApplication" />
         <item itemvalue="Spring Boot.TaskApplication" />
+        <item itemvalue="Spring Boot.ProjectApplication" />
         <item itemvalue="Spring Boot.RessourceApplication" />
         <item itemvalue="Spring Boot.EurekaApplication" />
         <item itemvalue="Spring Boot.ProjectApplication" />
@@ -241,7 +248,9 @@
       <workItem from="1725609925293" duration="19654000" />
       <workItem from="1725709079767" duration="599000" />
       <workItem from="1725871332947" duration="10163000" />
-      <workItem from="1725956608379" duration="4861000" />
+      <workItem from="1725956608379" duration="12528000" />
+      <workItem from="1726042306415" duration="9065000" />
+      <workItem from="1726053853634" duration="627000" />
     </task>
     <task id="LOCAL-00001" summary="créer multimodel et model project">
       <option name="closed" value="true" />
@@ -291,7 +300,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725640131384</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="modification du configuration">
+      <option name="closed" value="true" />
+      <created>1725962886643</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1725962886643</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +320,8 @@
     <MESSAGE value="ajouter flayway" />
     <MESSAGE value="réaliser toutes les fonctionalités nécessaire" />
     <MESSAGE value="ajouter le service authentification et l api gateway ainsi que l implémentation de la partie de sécurité dans toutes les services" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajouter le service authentification et l api gateway ainsi que l implémentation de la partie de sécurité dans toutes les services" />
+    <MESSAGE value="modification du configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="modification du configuration" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
