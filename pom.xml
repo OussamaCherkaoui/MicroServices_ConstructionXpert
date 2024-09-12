@@ -108,6 +108,6 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+        <finalName>ConstructionXpert</finalName>
     </build>
-
 </project>

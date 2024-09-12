@@ -30,6 +30,8 @@ public class ProjectController {
     @PreAuthorize("hasAuthority('ADMIN')")
     @PutMapping("/updateProject")
     public Project updateProject(@RequestBody Project projectDetails) {
+        System.out.println(projectDetails.getName());
+        System.out.println(projectDetails.getBudget());
         return projectService.updateProject(projectDetails);
     }
     @PreAuthorize("hasAuthority('ADMIN')")

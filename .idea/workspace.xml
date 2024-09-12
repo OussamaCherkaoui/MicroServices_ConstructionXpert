@@ -4,17 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5300d228-cf8a-45a9-89d5-7b37aed8321b" name="Changes" comment="modification du configuration">
-      <change afterPath="$PROJECT_DIR$/Ressource/src/main/java/org/ressource/config/AuthFeignInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Task/src/main/java/org/task/config/AuthFeignInterceptor.java" afterDir="false" />
+    <list default="true" id="5300d228-cf8a-45a9-89d5-7b37aed8321b" name="Changes" comment="ajouter du configuration openfeign">
+      <change afterPath="$PROJECT_DIR$/Api-Gateway/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentification-Service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Eureka/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressource/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_09_2024_09_19_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_09_2024_09_19__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_09_2024_09_22_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_09_2024_09_22__Changes_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressource/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Ressource/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressource/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Ressource/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Task/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/src/main/java/org/task/Project/ProjectRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/src/main/java/org/task/Project/ProjectRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/src/main/java/org/task/TaskApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/src/main/java/org/task/TaskApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Task/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/src/main/java/org/project/controller/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/main/java/org/project/controller/ProjectController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +30,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -57,67 +61,71 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven.Api-Gateway [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Api-Gateway [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Authentification-Service [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Authentification-Service [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.ConstructionXpert [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.ConstructionXpert [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.ConstructionXpert [verify].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Eureka [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Eureka [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Project [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Project [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Project [verify].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Ressource [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Ressource [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Task [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Task [install].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.AuthentificationServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.EurekaApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ProjectApplication (1).executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ProjectApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.RessourceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.TaskApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/IdeaProjects/ConstructionXpert/Task/src/main/java/org/task&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reactor&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "Maven.Api-Gateway [clean].executor": "Run",
+    "Maven.Api-Gateway [install].executor": "Run",
+    "Maven.Authentification-Service [clean].executor": "Run",
+    "Maven.Authentification-Service [install].executor": "Run",
+    "Maven.ConstructionXpert [clean].executor": "Run",
+    "Maven.ConstructionXpert [install].executor": "Run",
+    "Maven.ConstructionXpert [verify].executor": "Run",
+    "Maven.Eureka [clean].executor": "Run",
+    "Maven.Eureka [install].executor": "Run",
+    "Maven.Project [clean].executor": "Run",
+    "Maven.Project [install].executor": "Run",
+    "Maven.Project [verify].executor": "Run",
+    "Maven.Ressource [clean].executor": "Run",
+    "Maven.Ressource [install].executor": "Run",
+    "Maven.Task [clean].executor": "Run",
+    "Maven.Task [install].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.ApiGatewayApplication.executor": "Run",
+    "Spring Boot.AuthentificationServiceApplication.executor": "Run",
+    "Spring Boot.EurekaApplication.executor": "Run",
+    "Spring Boot.ProjectApplication (1).executor": "Run",
+    "Spring Boot.ProjectApplication.executor": "Run",
+    "Spring Boot.RessourceApplication.executor": "Run",
+    "Spring Boot.TaskApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "21",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/user/IdeaProjects/ConstructionXpert/Task",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "reactor",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mariadb&quot;,
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb",
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\user\IdeaProjects\ConstructionXpert\Task\src\main\java\org\task" />
-      <recent name="C:\Users\user\IdeaProjects\ConstructionXpert\Ressource\src\main\java\org\ressource" />
+      <recent name="C:\Users\user\IdeaProjects\ConstructionXpert\Task" />
+      <recent name="C:\Users\user\IdeaProjects\ConstructionXpert\Ressource" />
+      <recent name="C:\Users\user\IdeaProjects\ConstructionXpert\Project" />
+      <recent name="C:\Users\user\IdeaProjects\ConstructionXpert\Eureka" />
+      <recent name="C:\Users\user\IdeaProjects\ConstructionXpert\Authentification-Service" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -137,7 +145,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ProjectApplication">
+  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="Api-Gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.apigateway.ApiGatewayApplication" />
@@ -204,7 +212,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="Spring Boot.ApiGatewayApplication" />
       <item itemvalue="Spring Boot.AuthentificationServiceApplication" />
       <item itemvalue="Spring Boot.EurekaApplication" />
@@ -214,11 +235,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.TaskApplication" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Spring Boot.ProjectApplication" />
+        <item itemvalue="Spring Boot.TaskApplication" />
         <item itemvalue="Spring Boot.RessourceApplication" />
         <item itemvalue="Spring Boot.EurekaApplication" />
-        <item itemvalue="Spring Boot.ProjectApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -250,7 +271,9 @@
       <workItem from="1725871332947" duration="10163000" />
       <workItem from="1725956608379" duration="12528000" />
       <workItem from="1726042306415" duration="9065000" />
-      <workItem from="1726053853634" duration="627000" />
+      <workItem from="1726053853634" duration="7053000" />
+      <workItem from="1726082039847" duration="3186000" />
+      <workItem from="1726129369160" duration="5326000" />
     </task>
     <task id="LOCAL-00001" summary="créer multimodel et model project">
       <option name="closed" value="true" />
@@ -308,7 +331,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725962886643</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="ajouter du configuration openfeign">
+      <option name="closed" value="true" />
+      <created>1726058917581</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1726058917582</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +352,8 @@
     <MESSAGE value="réaliser toutes les fonctionalités nécessaire" />
     <MESSAGE value="ajouter le service authentification et l api gateway ainsi que l implémentation de la partie de sécurité dans toutes les services" />
     <MESSAGE value="modification du configuration" />
-    <option name="LAST_COMMIT_MESSAGE" value="modification du configuration" />
+    <MESSAGE value="ajouter du configuration openfeign" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajouter du configuration openfeign" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

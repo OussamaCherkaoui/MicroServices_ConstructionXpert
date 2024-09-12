@@ -20,6 +20,7 @@ import java.util.List;
 @AllArgsConstructor
 @Inheritance(strategy= InheritanceType.JOINED)
 @DiscriminatorColumn(name = "role")
+@Table(name = "Utilisateur")
 public abstract class Utilisateur implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

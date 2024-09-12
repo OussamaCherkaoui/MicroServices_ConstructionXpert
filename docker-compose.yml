@@ -1,0 +1,122 @@
+version: '3.8'
+services:
+  authentification-service:
+    build: ./Authentification-Service
+    ports:
+      - "8084:8084"
+    networks:
+      - constructionxpert-network
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://authentification-db:3306/authentification_db?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD:
+    depends_on:
+      - authentification-db
+
+  project-service:
+    build: ./Project
+    ports:
+      - "8081:8081"
+    networks:
+      - constructionxpert-network
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://project-db:3306/project_db?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD:
+    depends_on:
+      - project-db
+
+  task-service:
+    build: ./Task
+    ports:
+      - "8082:8082"
+    networks:
+      - constructionxpert-network
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://task-db:3306/task_db?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD:
+    depends_on:
+      - task-db
+
+  resource-service:
+    build: ./Ressource
+    ports:
+      - "8088:8088"
+    networks:
+      - constructionxpert-network
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://ressource-db:3306/ressource_db?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD:
+    depends_on:
+      - ressource-db
+
+  authentification-db:
+    image: mysql:8
+    environment:
+      MYSQL_DATABASE: authentification_db
+      MYSQL_ROOT_PASSWORD:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    ports:
+      - "3309:3306"
+    networks:
+      - constructionxpert-network
+
+
+  project-db:
+    image: mysql:8
+    environment:
+      MYSQL_DATABASE: project_db
+      MYSQL_ROOT_PASSWORD:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    ports:
+      - "3306:3306"
+    networks:
+      - constructionxpert-network
+
+  task-db:
+    image: mysql:8
+    environment:
+      MYSQL_DATABASE: task_db
+      MYSQL_ROOT_PASSWORD:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    ports:
+      - "3307:3306"
+    networks:
+      - constructionxpert-network
+
+  ressource-db:
+    image: mysql:8
+    environment:
+      MYSQL_DATABASE: ressource_db
+      MYSQL_ROOT_PASSWORD:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    ports:
+      - "3308:3306"
+    networks:
+      - constructionxpert-network
+
+  eureka-server:
+    build: ./Eureka
+    ports:
+      - "8761:8761"
+    networks:
+      - constructionxpert-network
+
+  api-gateway:
+      build: ./Api-Gateway
+      ports:
+        - "8080:8080"
+      networks:
+        - constructionxpert-network
+      depends_on:
+        - eureka-server
+        - project-service
+        - task-service
+        - resource-service
+        - authentification-service
+
+networks:
+  constructionxpert-network:
+    driver: bridge
