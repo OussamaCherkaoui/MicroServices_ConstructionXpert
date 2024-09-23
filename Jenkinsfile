@@ -126,7 +126,7 @@ pipeline {
                     steps {
                         dir('Authentification-Service') {
                             script {
-                                def dockerImage = docker.build("salmaba/user-service:${env.TAG_VERSION ?: 'latest'}")
+                                def dockerImage = docker.build("oussamacherkaoui/authentification-service:${env.TAG_VERSION ?: 'latest'}")
                                 docker.withRegistry('https://index.docker.io/v1/', 'docker-hub-credentials') {
                                     dockerImage.push()
                                 }
@@ -139,7 +139,7 @@ pipeline {
                     steps {
                         dir('Project') {
                             script {
-                                def dockerImage = docker.build("salmaba/projet-service:${env.TAG_VERSION ?: 'latest'}")
+                                def dockerImage = docker.build("oussamacherkaoui/project-service:${env.TAG_VERSION ?: 'latest'}")
                                 docker.withRegistry('https://index.docker.io/v1/', 'docker-hub-credentials') {
                                     dockerImage.push()
                                 }
@@ -152,7 +152,7 @@ pipeline {
                     steps {
                         dir('Task') {
                             script {
-                                def dockerImage = docker.build("salmaba/tache-service:${env.TAG_VERSION ?: 'latest'}")
+                                def dockerImage = docker.build("oussamacherkaoui/task-service:${env.TAG_VERSION ?: 'latest'}")
                                 docker.withRegistry('https://index.docker.io/v1/', 'docker-hub-credentials') {
                                     dockerImage.push()
                                 }
@@ -165,7 +165,7 @@ pipeline {
                     steps {
                         dir('Ressource') {
                             script {
-                                def dockerImage = docker.build("salmaba/ressource-service:${env.TAG_VERSION ?: 'latest'}")
+                                def dockerImage = docker.build("oussamacherkaoui/ressource-service:${env.TAG_VERSION ?: 'latest'}")
                                 docker.withRegistry('https://index.docker.io/v1/', 'docker-hub-credentials') {
                                     dockerImage.push()
                                 }
@@ -178,7 +178,7 @@ pipeline {
                     steps {
                         dir('Api-Gateway') {
                             script {
-                                def dockerImage = docker.build("salmaba/gateway-service:${env.TAG_VERSION ?: 'latest'}")
+                                def dockerImage = docker.build("oussamacherkaoui/api-gateway:${env.TAG_VERSION ?: 'latest'}")
                                 docker.withRegistry('https://index.docker.io/v1/', 'docker-hub-credentials') {
                                     dockerImage.push()
                                 }
@@ -191,7 +191,7 @@ pipeline {
                     steps {
                         dir('Eureka') {
                             script {
-                                def dockerImage = docker.build("salmaba/discovery-service:${env.TAG_VERSION ?: 'latest'}")
+                                def dockerImage = docker.build("oussamacherkaoui/eureka-service:${env.TAG_VERSION ?: 'latest'}")
                                 docker.withRegistry('https://index.docker.io/v1/', 'docker-hub-credentials') {
                                     dockerImage.push()
                                 }
