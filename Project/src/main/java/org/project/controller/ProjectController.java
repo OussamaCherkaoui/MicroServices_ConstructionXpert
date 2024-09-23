@@ -4,6 +4,10 @@ import org.project.exception.ProjectNotFoundException;
 import org.project.model.Project;
 import org.project.service.ProjectService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -23,10 +27,14 @@ public class ProjectController {
     }
 
     @PreAuthorize("hasAnyAuthority('ADMIN','USER')")
-    @GetMapping("/getAll")
-    public List<Project> getAllProjects() {
-        return projectService.getAllProjects();
+    @GetMapping("/getAll/{page}/{ascending}")
+    public Page<Project> getAllProjects(@PathVariable int page,
+                                        @PathVariable boolean ascending) {
+        Sort sort = ascending ? Sort.by("id").ascending() : Sort.by("id").descending();
+        Pageable pageable = PageRequest.of(page, 5, sort);
+        return projectService.getAllProjects(pageable);
     }
+
     @PreAuthorize("hasAuthority('ADMIN')")
     @PutMapping("/updateProject")
     public Project updateProject(@RequestBody Project projectDetails) {

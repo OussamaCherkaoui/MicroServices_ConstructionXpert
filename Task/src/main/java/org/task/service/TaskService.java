@@ -3,6 +3,8 @@ package org.task.service;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.task.Project.ProjectRest;
 import org.task.exception.ProjectNotFoundException;
@@ -40,9 +42,9 @@ public class TaskService {
         taskRepository.deleteById(id);
     }
 
-    public List<Task> getTasksByProjectId(Long projectId) throws ProjectNotFoundException {
+    public Page<Task> getTasksByProjectId(Long projectId, Pageable pageable) throws ProjectNotFoundException {
         validateProjectExists(projectId);
-        return taskRepository.findByProjectId(projectId);
+        return taskRepository.findByProjectId(projectId,pageable);
     }
 
     private void validateProjectExists(Long projectId) throws ProjectNotFoundException {

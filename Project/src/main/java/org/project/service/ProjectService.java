@@ -3,6 +3,8 @@ package org.project.service;
 import lombok.AllArgsConstructor;
 import org.project.model.Project;
 import org.project.repository.ProjectRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -18,8 +20,8 @@ public class ProjectService {
         return projectRepository.save(project);
     }
 
-    public List<Project> getAllProjects() {
-        return projectRepository.findAll();
+    public Page<Project> getAllProjects(Pageable pageable) {
+        return projectRepository.findAll(pageable);
     }
 
     public Project updateProject (Project project){

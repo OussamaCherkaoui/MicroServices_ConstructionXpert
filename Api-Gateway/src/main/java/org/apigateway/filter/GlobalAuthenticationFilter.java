@@ -32,7 +32,7 @@ public class GlobalAuthenticationFilter implements GlobalFilter {
                 return Mono.error(new RuntimeException("Missing authorization header"));
             }
 
-            String authHeader = Objects.requireNonNull(exchange.getRequest().getHeaders().get(HttpHeaders.AUTHORIZATION)).getFirst();
+            String authHeader = Objects.requireNonNull(exchange.getRequest().getHeaders().get(HttpHeaders.AUTHORIZATION)).get(0);
             if (authHeader != null && authHeader.startsWith("Bearer ")) {
                 authHeader = authHeader.substring(7);
             } else {

@@ -6,6 +6,8 @@ import org.ressource.exception.TaskNotFoundException;
 import org.ressource.model.Ressource;
 import org.ressource.repository.RessourceRepository;
 import org.ressource.task.TaskRest;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -47,8 +49,8 @@ public class RessourceService {
         resourceRepository.deleteById(id);
     }
 
-    public List<Ressource> getResourcesByTaskId(Long taskId) throws TaskNotFoundException {
+    public Page<Ressource> getResourcesByTaskId(Long taskId, Pageable pageable) throws TaskNotFoundException {
         validateTaskExists(taskId);
-        return resourceRepository.findByTaskId(taskId);
+        return resourceRepository.findByTaskId(taskId,pageable);
     }
 }

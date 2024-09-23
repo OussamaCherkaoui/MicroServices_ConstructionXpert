@@ -9,6 +9,10 @@ import org.project.model.Project;
 import org.project.repository.ProjectRepository;
 import org.project.service.ProjectService;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,8 +48,10 @@ class ProjectApplicationTests {
 
         when(projectRepository.findAll()).thenReturn(projectList);
 
-        List<Project> retrievedProjects = projectService.getAllProjects();
-        assertEquals(2, retrievedProjects.size());
-        assertEquals("Project 1", retrievedProjects.get(0).getName());
+        Sort sort = Sort.by("name").ascending();
+        Pageable pageable = PageRequest.of(0, 5, sort);
+        Page<Project> retrievedProjects = projectService.getAllProjects(pageable);
+        assertEquals(2, retrievedProjects.getTotalElements());
+        assertEquals("Project 1", retrievedProjects.getContent().get(0).getName());
     }
 }
