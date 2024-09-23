@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   authentification-service:
-    build: ./Authentification-Service
+    image: ./oussamacherkaoui/authentification-service
     ports:
       - "8084:8084"
     networks:
@@ -14,7 +14,7 @@ services:
       - authentification-db
 
   project-service:
-    build: ./Project
+    image: ./oussamacherkaoui/project-service
     ports:
       - "8081:8081"
     networks:
@@ -27,7 +27,7 @@ services:
       - project-db
 
   task-service:
-    build: ./Task
+    image: ./oussamacherkaoui/task-service
     ports:
       - "8082:8082"
     networks:
@@ -40,7 +40,7 @@ services:
       - task-db
 
   resource-service:
-    build: ./Ressource
+    image: ./oussamacherkaoui/ressource-service
     ports:
       - "8088:8088"
     networks:
