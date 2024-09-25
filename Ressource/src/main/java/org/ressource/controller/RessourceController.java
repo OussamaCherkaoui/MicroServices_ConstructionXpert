@@ -58,4 +58,12 @@ public class RessourceController {
         return ResponseEntity.ok(ressourceService.getResourcesByTaskId(taskId,pageable));
     }
 
+    @PreAuthorize("hasAnyAuthority('ADMIN','USER')")
+    @GetMapping("/getRessourceByType/{idTask}/{type}")
+    public Page<Ressource> getRessourcesByType(@PathVariable Long idTask,@PathVariable String type) {
+        System.out.println(type);
+        Sort sort = Sort.by("id").ascending();
+        Pageable pageable = PageRequest.of(0, 5, sort);
+        return ressourceService.getRessourceByType(idTask,type,pageable);
+    }
 }

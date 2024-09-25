@@ -1,5 +1,6 @@
 package org.task.service;
 
+import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ import org.task.repository.TaskRepository;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class TaskService {
     private final ProjectRest projectRest;
     private  final TaskRepository taskRepository;
@@ -60,5 +61,12 @@ public class TaskService {
 
     public Boolean existTask(Long id) {
         return taskRepository.findById(id).isPresent();
+    }
+
+    public Page<Task> getTasksByStatus(Long idProject, String status, Pageable pageable) throws ProjectNotFoundException {
+        validateProjectExists(idProject);
+        Page<Task> tasks = taskRepository.findByProjectIdAndStatus(idProject, status, pageable);
+        System.out.println(tasks.getContent());
+        return tasks;
     }
 }

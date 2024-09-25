@@ -23,4 +23,5 @@ public class Ressource {
 
     @Column(name = "tache_id", nullable = false)
     private Long taskId;
+
 }

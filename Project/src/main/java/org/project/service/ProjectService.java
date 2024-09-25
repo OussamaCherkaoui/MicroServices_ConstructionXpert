@@ -23,6 +23,9 @@ public class ProjectService {
     public Page<Project> getAllProjects(Pageable pageable) {
         return projectRepository.findAll(pageable);
     }
+    public Page<Project> getProjectsByName(String projectName,Pageable pageable) {
+        return projectRepository.findByName(projectName,pageable);
+    }
 
     public Project updateProject (Project project){
         return projectRepository.save(project);

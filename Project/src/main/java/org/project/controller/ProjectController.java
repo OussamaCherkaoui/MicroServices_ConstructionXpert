@@ -12,7 +12,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 
 @RestController
 @RequestMapping("/apiProject")
@@ -33,6 +32,15 @@ public class ProjectController {
         Sort sort = ascending ? Sort.by("id").ascending() : Sort.by("id").descending();
         Pageable pageable = PageRequest.of(page, 5, sort);
         return projectService.getAllProjects(pageable);
+    }
+
+    @PreAuthorize("hasAnyAuthority('ADMIN','USER')")
+    @GetMapping("/getProjectsByName/{nameSearched}")
+    public Page<Project> getProjectsByName(@PathVariable String nameSearched) {
+        System.out.println(nameSearched);
+        Sort sort = Sort.by("id").ascending();
+        Pageable pageable = PageRequest.of(0, 5, sort);
+        return projectService.getProjectsByName(nameSearched,pageable);
     }
 
     @PreAuthorize("hasAuthority('ADMIN')")

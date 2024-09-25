@@ -65,4 +65,13 @@ public class TaskController {
         boolean exists = taskService.existTask(id);
         return ResponseEntity.ok(exists);
     }
+
+    @PreAuthorize("hasAnyAuthority('ADMIN','USER')")
+    @GetMapping("/getTasksByStatus/{idProject}/{status}")
+    public Page<Task> getTaskByStatus(@PathVariable Long idProject,@PathVariable String status) throws ProjectNotFoundException {
+        System.out.println(status);
+        Sort sort = Sort.by("id").ascending();
+        Pageable pageable = PageRequest.of(0, 5, sort);
+        return taskService.getTasksByStatus(idProject,status,pageable);
+    }
 }

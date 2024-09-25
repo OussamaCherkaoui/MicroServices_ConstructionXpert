@@ -1,5 +1,6 @@
 package org.ressource.service;
 
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.ressource.exception.RessourceNotFoundException;
 import org.ressource.exception.TaskNotFoundException;
@@ -14,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class RessourceService {
     private final RessourceRepository resourceRepository;
     private final TaskRest taskRest;
@@ -52,5 +53,9 @@ public class RessourceService {
     public Page<Ressource> getResourcesByTaskId(Long taskId, Pageable pageable) throws TaskNotFoundException {
         validateTaskExists(taskId);
         return resourceRepository.findByTaskId(taskId,pageable);
+    }
+
+    public Page<Ressource> getRessourceByType(Long taskId, String type, Pageable pageable) {
+        return  resourceRepository.findByTaskIdAndType(taskId,type,pageable);
     }
 }
